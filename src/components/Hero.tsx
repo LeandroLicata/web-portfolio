@@ -1,5 +1,7 @@
 import Badge from "./Badge";
 import SocialPill from "./SocialPill";
+import { FiMail } from "react-icons/fi";
+import { FaLinkedin, FaGithub, FaWhatsapp, FaFilePdf } from "react-icons/fa";
 
 export default function Hero() {
   return (
@@ -28,11 +30,11 @@ export default function Hero() {
       </p>
       <nav className="flex flex-wrap gap-4 mt-8">
     <SocialPill href="mailto:miduga@gmail.com">
-      {/* <MailIcon className="size-4" /> */}
+      <FiMail className="size-4" />
       Contáctame
     </SocialPill>
     <SocialPill href="https://linkedin.com/in/midudev">
-      {/* <LinkedInIcon className="size-4" /> */}
+      <FaLinkedin className="size-4" />
       LinkedIn
     </SocialPill>
   </nav>
