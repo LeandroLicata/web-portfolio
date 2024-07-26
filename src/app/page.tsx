@@ -1,9 +1,12 @@
-import Image from "next/image";
+import Hero from "@/components/Hero";
+import SectionContainer from "@/components/SectionContainer";
 
 export default function Home() {
   return (
-    <div className="flex items-center justify-center min-h-screen">
-      <p className="text-white text-center text-3xl">Leandro Licata Portfolio</p>
-    </div>
+    <main className="px-4">
+      <SectionContainer id="hero" className="py-16 md:py-36">
+        <Hero />
+      </SectionContainer>
+    </main>
   );
 }
