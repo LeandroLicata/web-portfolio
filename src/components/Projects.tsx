@@ -1,4 +1,4 @@
-import { SiNextdotjs } from "react-icons/si";
+import { SiNextdotjs, SiTypescript, SiRedux } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
 import { FaGithub } from "react-icons/fa";
 import { FaLink } from "react-icons/fa6";
@@ -12,20 +12,30 @@ const TAGS = {
   },
   TAILWIND: {
     name: "Tailwind CSS",
-    className: "bg-[#003159] text-white",
+    className: "bg-[#38BDF8] text-black",
     icon: RiTailwindCssFill,
+  },
+  TYPESCRIPT: {
+    name: "TypeScript",
+    className: "bg-[#2F74C0] text-white",
+    icon: SiTypescript,
+  },
+  REDUX: {
+    name: "Redux",
+    className: "bg-[#764ABC] text-white",
+    icon: SiRedux,
   },
 };
 
 const PROJECTS = [
   {
-    title: "SVGL - A beautiful library with SVG logos",
+    title: "Timbring",
     description:
-      "Biblioteca de logos SVG de las marcas más populares. +10k visitas al mes. +2K svgs descargados. Creado desde cero con Next.js, React y Tailwind CSS.",
+      "Trabajé en Timbring, un servicio de optimización de entregas en e-commerce. Desarrollé la página de inicio con diseño responsivo, un formulario de registro con validaciones, y migré la autenticación de Auth0 a NextAuth para mejorar la experiencia del usuario. También implementé un sistema de recuperación de contraseñas y apoyé a mis compañeros con Next.js y Redux Toolkit.",
     link: "https://svgl.vercel.app/",
     github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    image: "/images/Timbring.png",
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.REDUX],
   },
   {
     title: "AdventJS - Retos de programación con JavaScript y TypeScript",
