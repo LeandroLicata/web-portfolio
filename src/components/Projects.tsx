@@ -1,6 +1,6 @@
 import { SiNextdotjs, SiTypescript, SiRedux } from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { FaGithub } from "react-icons/fa";
+import { FaGithub, FaNodeJs } from "react-icons/fa";
 import { FaLink } from "react-icons/fa6";
 import LinkButton from "./LinkButton";
 
@@ -11,7 +11,7 @@ const TAGS = {
     icon: SiNextdotjs,
   },
   TAILWIND: {
-    name: "Tailwind CSS",
+    name: "TailwindCSS",
     className: "bg-[#38BDF8] text-black",
     icon: RiTailwindCssFill,
   },
@@ -25,6 +25,11 @@ const TAGS = {
     className: "bg-[#764ABC] text-white",
     icon: SiRedux,
   },
+  NODE: {
+    name: "Node.js",
+    className: "bg-white text-[#689F63]",
+    icon: FaNodeJs
+  }
 };
 
 const PROJECTS = [
@@ -32,10 +37,10 @@ const PROJECTS = [
     title: "Timbring",
     description:
       "Trabajé en Timbring, un servicio de optimización de entregas en e-commerce. Desarrollé la página de inicio con diseño responsivo, un formulario de registro con validaciones, y migré la autenticación de Auth0 a NextAuth para mejorar la experiencia del usuario. También implementé un sistema de recuperación de contraseñas y apoyé a mis compañeros con Next.js y Redux Toolkit.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
+    link: "https://www.timbring.com/",
+    github: null,
     image: "/images/Timbring.png",
-    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.REDUX],
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.REDUX, TAGS.NODE],
   },
   {
     title: "AdventJS - Retos de programación con JavaScript y TypeScript",
