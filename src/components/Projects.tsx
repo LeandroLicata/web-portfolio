@@ -1,6 +1,17 @@
-import { SiNextdotjs, SiTypescript, SiRedux } from "react-icons/si";
+import {
+  SiNextdotjs,
+  SiTypescript,
+  SiRedux,
+  SiCloudinary,
+} from "react-icons/si";
 import { RiTailwindCssFill } from "react-icons/ri";
-import { FaGithub, FaNodeJs, FaReact, FaBootstrap, FaYoutube } from "react-icons/fa";
+import {
+  FaGithub,
+  FaNodeJs,
+  FaReact,
+  FaBootstrap,
+  FaYoutube,
+} from "react-icons/fa";
 import { FaLink } from "react-icons/fa6";
 import { BiLogoMongodb } from "react-icons/bi";
 import LinkButton from "./LinkButton";
@@ -45,6 +56,11 @@ const TAGS = {
     name: "MongoDB",
     className: "bg-white text-[#06232E]",
     icon: BiLogoMongodb,
+  },
+  CLOUDINARY: {
+    name: "Cloudinary",
+    className: "bg-white text-[#3448C5]",
+    icon: SiCloudinary,
   },
 };
 
@@ -91,25 +107,25 @@ const PROJECTS = [
     title: "Novelty Books",
     description:
       "Como parte de mi formación en programación, participé en un proyecto final grupal llamado Novelty Books junto a mis compañeros de Henry. En este proyecto desarrollamos un e-commerce de libros físicos, aplicando diversas herramientas y técnicas de programación.",
-      links: [
-        {
-          href: "https://www.youtube.com/watch?v=6JF0WrhJlw0",
-          label: "Video",
-          icon: FaYoutube
-        },
-        {
-          href: "https://github.com/Chitichi/PFFront",
-          label: "Front End Code",
-          icon: FaGithub,
-        },
-        {
-          href: "https://github.com/Arthaz1245/ProyectoFinalGrupo14Backend",
-          label: "Back End Code",
-          icon: FaGithub,
-        },
-      ],
-      image: "/images/Novelty-Books.png",
-      tags: []
+    links: [
+      {
+        href: "https://www.youtube.com/watch?v=6JF0WrhJlw0",
+        label: "Video",
+        icon: FaYoutube,
+      },
+      {
+        href: "https://github.com/Chitichi/PFFront",
+        label: "Front End Code",
+        icon: FaGithub,
+      },
+      {
+        href: "https://github.com/Arthaz1245/ProyectoFinalGrupo14Backend",
+        label: "Back End Code",
+        icon: FaGithub,
+      },
+    ],
+    image: "/images/Novelty-Books.png",
+    tags: [TAGS.MONGODB, TAGS.NODE, TAGS.CLOUDINARY, TAGS.NEXT, TAGS.BOOTSTRAP],
   },
 ];
 
