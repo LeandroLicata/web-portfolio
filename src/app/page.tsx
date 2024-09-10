@@ -1,7 +1,9 @@
 import Hero from "@/components/Hero";
 import SectionContainer from "@/components/SectionContainer";
 import { FaCode } from "react-icons/fa";
+import { TbUserCheck } from "react-icons/tb";
 import Projects from "@/components/Projects";
+import AboutMe from "@/components/AboutMe";
 
 export default function Home() {
   return (
@@ -18,6 +20,13 @@ export default function Home() {
             Proyectos
           </h2>
           <Projects />
+        </SectionContainer>
+        <SectionContainer id="about-me" className="">
+          <h2 className="flex items-center mb-6 text-3xl font-semibold gap-x-8 text-white">
+            <TbUserCheck className="size-8" />
+            Sobre mí
+          </h2>
+          <AboutMe />
         </SectionContainer>
       </div>
     </>
