@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Exo_2 } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const exo2 = Exo_2({
   weight: "400",
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body className={exo2.className}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
