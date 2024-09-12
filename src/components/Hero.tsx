@@ -1,7 +1,7 @@
 import Badge from "./Badge";
 import SocialPill from "./SocialPill";
 import { FiMail } from "react-icons/fi";
-import { FaLinkedin, FaGithub, FaWhatsapp, FaFilePdf } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaFilePdf } from "react-icons/fa";
 
 export default function Hero() {
   return (
@@ -29,15 +29,23 @@ export default function Hero() {
         Especializado en el desarrollo de aplicaciones web únicas.
       </p>
       <nav className="flex flex-wrap gap-4 mt-8">
-    <SocialPill href="mailto:miduga@gmail.com">
-      <FiMail className="size-4" />
-      Contáctame
-    </SocialPill>
-    <SocialPill href="https://linkedin.com/in/midudev">
-      <FaLinkedin className="size-4" />
-      LinkedIn
-    </SocialPill>
-  </nav>
+        <SocialPill href="mailto:leandrolicata1@gmail.com">
+          <FiMail className="size-4" />
+          Contáctame
+        </SocialPill>
+        <SocialPill href="https://linkedin.com/in/leandro-licata">
+          <FaLinkedin className="size-4" />
+          LinkedIn
+        </SocialPill>
+        <SocialPill href="https://github.com/LeandroLicata">
+          <FaGithub className="size-4" />
+          Github
+        </SocialPill>
+        <SocialPill href="/documents/Leandro Licata CV.pdf">
+          <FaFilePdf className="size-4" />
+          CV
+        </SocialPill>
+      </nav>
     </div>
   );
 }
