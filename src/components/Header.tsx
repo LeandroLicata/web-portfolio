@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 const navItems = [
@@ -7,26 +10,44 @@ const navItems = [
     url: "/#home",
   },
   {
-    title: "Sobre mí",
-    label: "about-me",
-    url: "/#about-me",
-  },
-  {
     title: "Proyectos",
     label: "projects",
     url: "/#projects",
   },
   {
-    title: "Tecnologías",
-    label: "technologies",
-    url: "/#technologies",
+    title: "Sobre mí",
+    label: "about-me",
+    url: "/#about-me",
   },
 ];
 
 export default function Header() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 50) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="fixed top-0 z-10 flex items-center justify-center w-full mx-auto mt-2">
-      <nav className="flex px-3 text-sm font-medium rounded-full text-white justify-center items-center bg-black">
+    <header
+      className={`fixed top-0 z-10 w-full mx-auto transition-all text-white ${
+        scrolled ? "bg-gray-800/90" : "bg-none"
+      }`}
+    >
+      <nav className="flex items-center justify-center px-3 py-2 text-sm font-medium rounded-full">
         {navItems.map((link) => (
           <Link
             key={link.label}

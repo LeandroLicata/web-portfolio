@@ -25,13 +25,18 @@ export default function Hero() {
         Hola, soy Leandro Licata
       </h1>
       <p className="mt-6 text-xl text-gray-200 [&>strong]:text-light-blue [&>strong]:font-semibold">
-        <strong>Full Stack Web Developer </strong> de Mendoza, Argentina.
-        Especializado en el desarrollo de aplicaciones web únicas.
+        <strong>Full Stack Web Developer </strong> de Mendoza, Argentina,
+        especializado en la creación de aplicaciones web con{" "}
+        <strong>React</strong>. Mi framework favorito es{" "}
+        <strong>Next.js</strong> y tengo sólidos conocimientos en{" "}
+        <strong>Node.js</strong>, <strong>PostgreSQL</strong> y{" "}
+        <strong>MongoDB</strong>.
       </p>
+
       <nav className="flex flex-wrap gap-4 mt-8">
         <SocialPill href="mailto:leandrolicata1@gmail.com">
           <FiMail className="size-4" />
-          Contáctame
+          Mail
         </SocialPill>
         <SocialPill href="https://linkedin.com/in/leandro-licata">
           <FaLinkedin className="size-4" />
@@ -43,7 +48,7 @@ export default function Hero() {
         </SocialPill>
         <SocialPill href="/documents/Leandro Licata CV.pdf">
           <FaFilePdf className="size-4" />
-          CV
+          Ver Currículum
         </SocialPill>
       </nav>
     </div>
