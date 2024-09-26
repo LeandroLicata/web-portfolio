@@ -13,9 +13,17 @@ export default function AboutMe() {
 
         <p>
           Uno de <strong>mis logros más destacados</strong> fue durante mi
-          tiempo en <strong>Timbring</strong>, donde{" "}
-          <strong>lideré con éxito</strong> la migración de la autenticación a{" "}
-          <strong>NextAuth</strong> y trabajé en la{" "}
+          tiempo en{" "}
+          <a
+            href="https://timbring.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-light-blue hover:underline"
+          >
+            <strong>Timbring</strong>
+          </a>
+          , donde <strong>lideré con éxito</strong> la migración de la
+          autenticación a <strong>NextAuth</strong> y trabajé en la{" "}
           <strong>optimización del formulario de registro</strong>. Este cambio
           permitió que <strong>cientos de usuarios</strong> se registraran e
           iniciaran sesión de manera más rápida y eficiente.
@@ -25,8 +33,15 @@ export default function AboutMe() {
           Tengo{" "}
           <strong>experiencia en el desarrollo de aplicaciones web</strong>, y
           uno de <strong>mis proyectos más notables</strong> es{" "}
-          <strong>Gamepedia</strong>. Este proyecto me permitió combinar dos de
-          mis mayores pasiones:{" "}
+          <a
+            href="https://gamepedia.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-light-blue hover:underline"
+          >
+            <strong>Gamepedia</strong>
+          </a>
+          . Este proyecto me permitió combinar dos de mis mayores pasiones:{" "}
           <strong>la programación y los videojuegos</strong>. En{" "}
           <strong>Gamepedia</strong>, ayudé a los usuarios a acceder a{" "}
           <strong>información detallada</strong> sobre cualquier videojuego y

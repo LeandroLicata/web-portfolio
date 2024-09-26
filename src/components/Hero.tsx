@@ -21,7 +21,7 @@ export default function Hero() {
           <Badge>Disponible para trabajar</Badge>
         </a>
       </div>
-      <h1 className="text-4xl font-bold tracking-tight text-gray-200 sm:text-5xl dark:text-white">
+      <h1 className="text-3xl font-bold tracking-tight text-gray-200 md:text-5xl dark:text-white">
         Hola, soy Leandro Licata
       </h1>
       <p className="mt-6 text-xl text-gray-200 [&>strong]:text-light-blue [&>strong]:font-semibold">
@@ -48,7 +48,7 @@ export default function Hero() {
         </SocialPill>
         <SocialPill href="/documents/Leandro Licata CV.pdf">
           <FaFilePdf className="size-4" />
-          Ver Currículum
+          Currículum
         </SocialPill>
       </nav>
     </div>

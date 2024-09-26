@@ -91,12 +91,12 @@ const PROJECTS = [
       },
       {
         href: "https://github.com/LeandroLicata/PI-Videogames-Frontend",
-        label: "Front End Code",
+        label: "Front End",
         icon: FaGithub,
       },
       {
         href: "https://github.com/LeandroLicata/PI-Videogames-Backend",
-        label: "Back End Code",
+        label: "Back End",
         icon: FaGithub,
       },
     ],
@@ -115,12 +115,12 @@ const PROJECTS = [
       },
       {
         href: "https://github.com/Chitichi/PFFront",
-        label: "Front End Code",
+        label: "Front End",
         icon: FaGithub,
       },
       {
         href: "https://github.com/Arthaz1245/ProyectoFinalGrupo14Backend",
-        label: "Back End Code",
+        label: "Back End",
         icon: FaGithub,
       },
     ],
@@ -151,7 +151,7 @@ export default function Projects() {
           <div className="w-full md:w-1/2 md:max-w-lg">
             <h3 className="text-2xl font-bold text-gray-100">{title}</h3>
             <div className="flex flex-wrap mt-2">
-              <ul className="flex flex-row mb-2 gap-x-2">
+              <ul className="grid grid-cols-3 md:grid-cols-4 gap-2">
                 {tags.map((tag) => (
                   <li key={tag.name}>
                     <span

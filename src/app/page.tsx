@@ -8,12 +8,12 @@ import AboutMe from "@/components/AboutMe";
 export default function Home() {
   return (
     <>
-      <main className="px-4">
+      <main className="mx-4">
         <SectionContainer id="hero" className="py-16 md:py-36">
           <Hero />
         </SectionContainer>
       </main>
-      <div className="space-y-24">
+      <div className="space-y-24 mx-4">
         <SectionContainer id="projects" className="">
           <h2 className="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-white">
             <FaCode className="size-7" />
