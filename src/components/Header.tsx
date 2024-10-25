@@ -47,11 +47,11 @@ export default function Header() {
         scrolled ? "bg-gray-800/90" : "bg-none"
       }`}
     >
-      <nav className="flex items-center justify-center px-3 py-2 text-sm font-medium rounded-full">
+      <nav className="flex items-center justify-center px-3 py-2 text-2xl font-medium rounded-full">
         {navItems.map((link) => (
           <Link
             key={link.label}
-            className="relative block px-2 py-2 transition hover:text-light-blue"
+            className="relative block px-3 py-2 transition hover:text-light-blue"
             aria-label={link.label}
             href={link.url}
           >
