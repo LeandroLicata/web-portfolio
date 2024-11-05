@@ -43,7 +43,7 @@ export default function Header() {
 
   return (
     <header
-      className={`fixed top-0 z-10 w-full mx-auto transition-all text-white ${
+      className={`fixed top-0 z-10 w-full mx-auto transition-all text-blue-neon ${
         scrolled ? "bg-gray-800/90" : "bg-none"
       }`}
     >
@@ -51,7 +51,7 @@ export default function Header() {
         {navItems.map((link) => (
           <Link
             key={link.label}
-            className="relative block px-3 py-2 transition hover:text-light-blue"
+            className="relative block px-3 py-2 transition hover:text-pink"
             aria-label={link.label}
             href={link.url}
           >

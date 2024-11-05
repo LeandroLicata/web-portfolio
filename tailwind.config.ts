@@ -16,6 +16,7 @@ const config: Config = {
       colors: {
         "light-blue": "#0dd6fa",
         "pink": "#c92ec7",
+        "blue-neon": "#00A7E1",
       }
     },
   },
