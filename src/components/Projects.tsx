@@ -15,6 +15,7 @@ import {
 import { FaLink } from "react-icons/fa6";
 import { BiLogoMongodb } from "react-icons/bi";
 import LinkButton from "./LinkButton";
+import TVEffect from "./TVEffect";
 
 const TAGS = {
   NEXT: {
@@ -137,7 +138,7 @@ export default function Projects() {
           className="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0"
           key={title}
         >
-          <div className="w-full md:w-1/2">
+          {/* <div className="w-full md:w-1/2">
             <div className="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
               <img
                 alt={`Imagen del proyecto ${title}`}
@@ -146,10 +147,18 @@ export default function Projects() {
                 src={image}
               />
             </div>
+          </div> */}
+
+          <div className="w-auto h-64 md:w-1/2">
+            <TVEffect
+              src={image}
+              alt={`Imagen del proyecto ${title}`}
+              className="object-cover transition duration-500 sm:h-full"
+            />
           </div>
 
           <div className="w-full md:w-1/2 md:max-w-lg">
-            <h3 className="text-2xl font-bold text-gray-100">{title}</h3>
+            <h3 className="text-2xl text-pink">{title}</h3>
             <div className="flex flex-wrap mt-2">
               <ul className="grid grid-cols-3 md:grid-cols-4 gap-2">
                 {tags.map((tag) => (
@@ -164,7 +173,7 @@ export default function Projects() {
                 ))}
               </ul>
 
-              <div className="mt-2 text-gray-400">{description}</div>
+              <div className="mt-2 text-light-blue">{description}</div>
               <footer className="flex items-start mt-4 gap-x-2">
                 {links.map(({ href, label, icon: Icon }) => (
                   <LinkButton href={href} key={label}>

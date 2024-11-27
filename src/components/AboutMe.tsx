@@ -1,63 +1,67 @@
+import TVEffect from "./TVEffect";
+
 export default function AboutMe() {
   return (
-    <article className="flex flex-col items-center justify-center gap-8 text-gray-300 md:flex-row">
-      <div className="[&>p]:mb-4 [&>p>strong]:text-light-blue [&>p>strong]:font-normal [&>p>strong]:font-mono text-pretty order-2 md:order-1">
+    <article className="flex flex-col items-center justify-center gap-8 text-light-blue md:flex-row text-lg">
+      <div className="[&>p]:mb-4 [&>p>span]:text-pink order-2 md:order-1">
         <p>
-          <strong>¡Hola! Soy Leandro</strong>. Inicialmente, me formé como{" "}
-          <strong>Técnico Electricista</strong> y{" "}
-          <strong>Técnico en Armado y Reparación de PC</strong>, pero con el
-          tiempo, me sumergí en el mundo de la <strong>Programación</strong>,
-          donde encontré mi verdadera pasión. Desde entonces,{" "}
-          <strong>me encanta crear experiencias web para los usuarios</strong>.
+          <span>¡Hola! Soy Leandro</span>. Inicialmente, me formé como{" "}
+          <span>Técnico Electricista</span> y{" "}
+          <span>Técnico en Armado y Reparación de PC</span>, pero con el tiempo,
+          me sumergí en el mundo de la <span>Programación</span>, donde encontré
+          mi verdadera pasión. Desde entonces,{" "}
+          <span>me encanta crear experiencias web para los usuarios</span>.
         </p>
 
         <p>
-          Uno de <strong>mis logros más destacados</strong> fue durante mi
-          tiempo en{" "}
+          Uno de <span>mis logros más destacados</span> fue durante mi tiempo en{" "}
           <a
             href="https://timbring.com"
             target="_blank"
             rel="noopener noreferrer"
             className="text-light-blue hover:underline"
           >
-            <strong>Timbring</strong>
+            <span>Timbring</span>
           </a>
-          , donde <strong>lideré con éxito</strong> la migración de la
-          autenticación a <strong>NextAuth</strong> y trabajé en la{" "}
-          <strong>optimización del formulario de registro</strong>. Este cambio
-          permitió que <strong>cientos de usuarios</strong> se registraran e
+          , donde <span>lideré con éxito</span> la migración de la autenticación
+          a <span>NextAuth</span> y trabajé en la{" "}
+          <span>optimización del formulario de registro</span>. Este cambio
+          permitió que <span>cientos de usuarios</span> se registraran e
           iniciaran sesión de manera más rápida y eficiente.
         </p>
 
         <p>
-          Tengo{" "}
-          <strong>experiencia en el desarrollo de aplicaciones web</strong>, y
-          uno de <strong>mis proyectos más notables</strong> es{" "}
+          Tengo <span>experiencia en el desarrollo de aplicaciones web</span>, y
+          uno de <span>mis proyectos más notables</span> es{" "}
           <a
             href="https://gamepedia.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-light-blue hover:underline"
+            className="text-pink hover:underline"
           >
-            <strong>Gamepedia</strong>
+            <span>Gamepedia</span>
           </a>
           . Este proyecto me permitió combinar dos de mis mayores pasiones:{" "}
-          <strong>la programación y los videojuegos</strong>. En{" "}
-          <strong>Gamepedia</strong>, ayudé a los usuarios a acceder a{" "}
-          <strong>información detallada</strong> sobre cualquier videojuego y
-          disfrutar de <strong>capturas de pantalla</strong>.{" "}
-          <strong>¡Te invito a explorarlo!</strong>
+          <span>la programación y los videojuegos</span>. En{" "}
+          <span>Gamepedia</span>, ayudé a los usuarios a acceder a{" "}
+          <span>información detallada</span> sobre cualquier videojuego y
+          disfrutar de <span>capturas de pantalla</span>.{" "}
+          <span>¡Te invito a explorarlo!</span>
         </p>
       </div>
 
-      <img
+      {/* <img
         width="200"
         height="200"
         src="/images/me.jpg"
         alt="Leandro Licata"
         className="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-72 aspect-square rounded-2xl bg-yellow-500/5 ring-1 ring-white/20"
         style={{ objectPosition: "50% 50%" }}
-      ></img>
+      ></img> */}
+
+      <div className="order-1 md:order-2 rotate-3 w-full h-64">
+        <TVEffect src="/images/me.jpg" alt="Leandro Licata" />
+      </div>
     </article>
   );
 }

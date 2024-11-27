@@ -1,9 +1,9 @@
 "use client";
 
 import SocialPill from "./SocialPill";
+import TVEffect from "./TVEffect";
 import { FiMail } from "react-icons/fi";
 import { FaLinkedin, FaGithub, FaFilePdf } from "react-icons/fa";
-import { motion, useAnimation } from "framer-motion";
 
 const socialLinks = [
   { href: "mailto:leandrolicata1@gmail.com", icon: FiMail, label: "Mail" },
@@ -22,35 +22,32 @@ const socialLinks = [
 
 export default function Hero() {
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex items-center justify-between pt-4 lg:pt-0">
       <div className="max-w-xl flex-1">
-        <h1 className="text-3xl tracking-tight text-light-blue md:text-5xl dark:text-white">
+        <h1 className="text-3xl tracking-tight text-blue-neon md:text-5xl dark:text-white">
           Hola, soy Leandro Licata
         </h1>
-        <p className="mt-6 text-xl text-light-blue [&>strong]:text-pink">
-          <strong>Full Stack Web Developer </strong> de Mendoza, Argentina,
+        <p className="mt-6 text-xl text-light-blue [&>span]:text-pink">
+          <span>Desarrollador Web Full Stack </span> de Mendoza, Argentina,
           especializado en la creación de aplicaciones web con{" "}
-          <strong>React</strong>. Mi framework favorito es{" "}
-          <strong>Next.js</strong> y tengo sólidos conocimientos en{" "}
-          <strong>Node.js</strong>, <strong>PostgreSQL</strong> y{" "}
-          <strong>MongoDB</strong>.
+          <span>React</span>. Mi framework favorito es <span>Next.js</span> y
+          tengo sólidos conocimientos en <span>Node.js</span>,{" "}
+          <span>PostgreSQL</span> y <span>MongoDB</span>.
         </p>
 
         <nav className="flex flex-wrap gap-4 mt-8">
           {socialLinks.map(({ href, icon: Icon, label }) => (
             <SocialPill href={href} key={label}>
               <Icon className="size-9" />
-              {/* <span className="ml-2 hidden group-hover:inline">{label}</span> */}
             </SocialPill>
           ))}
         </nav>
       </div>
-      <div className="ml-5">
-        <motion.img
-          src="images/profile.jpeg"
-          alt="Descripción de la imagen"
-          className="w-60 h-auto rounded-full"
-          transition={{ duration: 0.5 }} // Duración de la transición
+
+      <div className="w-64 h-64 hidden lg:block">
+        <TVEffect
+          src="/images/profile.jpeg"
+          alt="Foto de perfil con efecto TV"
         />
       </div>
     </div>
