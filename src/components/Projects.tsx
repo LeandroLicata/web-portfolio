@@ -138,17 +138,6 @@ export default function Projects() {
           className="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0"
           key={title}
         >
-          {/* <div className="w-full md:w-1/2">
-            <div className="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-              <img
-                alt={`Imagen del proyecto ${title}`}
-                className="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
-                loading="lazy"
-                src={image}
-              />
-            </div>
-          </div> */}
-
           <div className="w-auto h-64 md:w-1/2">
             <TVEffect
               src={image}

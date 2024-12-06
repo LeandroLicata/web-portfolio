@@ -50,15 +50,6 @@ export default function AboutMe() {
         </p>
       </div>
 
-      {/* <img
-        width="200"
-        height="200"
-        src="/images/me.jpg"
-        alt="Leandro Licata"
-        className="order-1 object-cover w-64 h-full p-1 md:order-2 rotate-3 lg:p-2 lg:w-72 aspect-square rounded-2xl bg-yellow-500/5 ring-1 ring-white/20"
-        style={{ objectPosition: "50% 50%" }}
-      ></img> */}
-
       <div className="order-1 md:order-2 rotate-3 w-full h-64">
         <TVEffect src="/images/me.jpg" alt="Leandro Licata" />
       </div>

@@ -1,7 +1,6 @@
 "use client";
 
 import SocialPill from "./SocialPill";
-import TVEffect from "./TVEffect";
 import { FiMail } from "react-icons/fi";
 import { FaLinkedin, FaGithub, FaFilePdf } from "react-icons/fa";
 
@@ -44,12 +43,11 @@ export default function Hero() {
         </nav>
       </div>
 
-      <div className="w-64 h-64 hidden lg:block">
-        <TVEffect
-          src="/images/profile.jpeg"
-          alt="Foto de perfil con efecto TV"
-        />
-      </div>
+      <img
+        src="/images/pixel_art_avatar.png"
+        alt="avatar"
+        className="w-64 h-auto hidden lg:block"
+      />
     </div>
   );
 }
