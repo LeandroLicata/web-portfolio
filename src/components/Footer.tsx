@@ -1,14 +1,17 @@
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
-    <footer className="opacity-80 p-4 mt-16 w-full mx-auto container lg:max-w-4xl md:max-w-2xl mb-10 flex justify-center">
-      <div className="rounded-lg w-full max-w-screen-xl mx-auto md:flex md:items-center md:justify-between py-4">
-        <span className="text-md sm:text-center text-blue-neon">
+    <footer className="opacity-90 p-4 mt-16 w-full mx-auto container lg:max-w-4xl md:max-w-2xl mb-10 flex justify-center">
+      <div className="rounded-lg w-full max-w-screen-xl mx-auto md:flex md:items-center md:justify-between py-4 border-t border-border-soft">
+        <span className="text-md sm:text-center text-accent-pink drop-shadow-glow">
           © {currentYear} Leandro Licata.
         </span>
-        <ul className="flex flex-wrap items-center mt-3 text-md text-light-blue sm:mt-0">
+        <ul className="flex flex-wrap items-center mt-3 text-md text-accent-blue sm:mt-0 gap-x-4">
           <li>
-            <a href="/#about-me" className="hover:underline me-4 md:me-6">
+            <a
+              href="/#about-me"
+              className="hover:underline hover:text-accent-pink transition"
+            >
               Sobre mí
             </a>
           </li>
@@ -16,7 +19,7 @@ export default function Footer() {
             <a
               id="contacto"
               href="mailto:leandrolicata1@gmail.com"
-              className="hover:underline"
+              className="hover:underline hover:text-accent-pink transition"
             >
               Contacto
             </a>
