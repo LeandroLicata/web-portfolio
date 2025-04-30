@@ -23,10 +23,11 @@ export default function Hero() {
   return (
     <div className="flex items-center justify-between pt-4 lg:pt-0">
       <div className="max-w-xl flex-1">
-        <h1 className="text-3xl tracking-tight text-blue-neon md:text-5xl dark:text-white">
+        <h1 className="text-3xl md:text-5xl font-bold tracking-tight text-accent-blue">
           Hola, soy Leandro Licata
         </h1>
-        <p className="mt-6 text-xl text-light-blue [&>span]:text-pink">
+
+        <p className="mt-6 text-xl text-text-secondary [&>span]:text-accent-pink">
           <span>Desarrollador Web Full Stack </span> de Mendoza, Argentina,
           especializado en la creación de aplicaciones web con{" "}
           <span>React</span>. Mi framework favorito es <span>Next.js</span> y
@@ -37,16 +38,16 @@ export default function Hero() {
         <nav className="flex flex-wrap gap-4 mt-8">
           {socialLinks.map(({ href, icon: Icon, label }) => (
             <SocialPill href={href} key={label}>
-              <Icon className="size-9" />
+              <Icon className="size-9 text-accent-green hover:text-accent-yellow transition-colors duration-200" />
             </SocialPill>
           ))}
         </nav>
       </div>
 
       <img
-        src="/images/pixel_art_avatar.png"
+        src="/images/avatar.png"
         alt="avatar"
-        className="w-64 h-auto hidden lg:block"
+        className="w-auto h-72 hidden lg:block rounded-xl border border-border-soft shadow-lg"
       />
     </div>
   );
