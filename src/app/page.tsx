@@ -8,22 +8,24 @@ import AboutMe from "@/components/AboutMe";
 export default function Home() {
   return (
     <>
-      <main className="mx-4">
-        <SectionContainer id="hero" className="py-16 md:py-36">
+      <main className="mx-4 py-16 md:py-36">
+        <SectionContainer id="hero">
           <Hero />
         </SectionContainer>
       </main>
+
       <div className="space-y-24 mx-4">
-        <SectionContainer id="projects" className="">
-          <h2 className="flex items-center mb-6 text-3xl gap-x-3 text-blue-neon">
-            <FaCode className="size-7" />
+        <SectionContainer id="projects">
+          <h2 className="flex items-center mb-6 text-3xl gap-x-3 text-accent-pink drop-shadow-glow">
+            <FaCode className="size-7 text-accent-green" />
             Proyectos
           </h2>
           <Projects />
         </SectionContainer>
-        <SectionContainer id="about-me" className="">
-          <h2 className="flex items-center mb-6 text-3xl gap-x-8 text-blue-neon">
-            <TbUserCheck className="size-8" />
+
+        <SectionContainer id="about-me">
+          <h2 className="flex items-center mb-6 text-3xl gap-x-3 text-accent-pink drop-shadow-glow">
+            <TbUserCheck className="size-8 text-accent-green" />
             Sobre mí
           </h2>
           <AboutMe />

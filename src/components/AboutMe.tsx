@@ -2,8 +2,8 @@ import TVEffect from "./TVEffect";
 
 export default function AboutMe() {
   return (
-    <article className="flex flex-col items-center justify-center gap-8 text-light-blue md:flex-row text-lg">
-      <div className="[&>p]:mb-4 [&>p>span]:text-pink order-2 md:order-1">
+    <article className="flex flex-col items-center justify-center gap-8 text-text-base md:flex-row text-lg">
+      <div className="[&>p]:mb-4 [&>p>span]:text-accent-pink order-2 md:order-1">
         <p>
           <span>¡Hola! Soy Leandro</span>. Inicialmente, me formé como{" "}
           <span>Técnico Electricista</span> y{" "}
@@ -19,7 +19,7 @@ export default function AboutMe() {
             href="https://timbring.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-light-blue hover:underline"
+            className="text-accent-yellow hover:underline hover:text-accent-green transition"
           >
             <span>Timbring</span>
           </a>
@@ -37,7 +37,7 @@ export default function AboutMe() {
             href="https://gamepedia.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-pink hover:underline"
+            className="text-accent-yellow hover:underline hover:text-accent-green transition"
           >
             <span>Gamepedia</span>
           </a>
@@ -50,7 +50,7 @@ export default function AboutMe() {
         </p>
       </div>
 
-      <div className="order-1 md:order-2 rotate-3 w-full h-64">
+      <div className="order-1 md:order-2 rotate-3 w-full h-64 rounded-lg border border-border-soft shadow-lg">
         <TVEffect src="/images/me.jpg" alt="Leandro Licata" />
       </div>
     </article>
