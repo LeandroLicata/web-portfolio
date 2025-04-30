@@ -135,39 +135,41 @@ export default function Projects() {
     <div className="flex flex-col gap-y-16">
       {PROJECTS.map(({ image, title, description, tags, links }) => (
         <article
-          className="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0"
           key={title}
+          className="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0"
         >
           <div className="w-auto h-64 md:w-1/2">
             <TVEffect
               src={image}
               alt={`Imagen del proyecto ${title}`}
-              className="object-cover transition duration-500 sm:h-full"
+              className="object-cover transition duration-500 sm:h-full rounded-lg border border-border-soft shadow-md"
             />
           </div>
 
           <div className="w-full md:w-1/2 md:max-w-lg">
-            <h3 className="text-2xl text-pink">{title}</h3>
+            <h3 className="text-2xl font-semibold text-accent-pink">{title}</h3>
+
             <div className="flex flex-wrap mt-2">
               <ul className="grid grid-cols-3 md:grid-cols-4 gap-2">
                 {tags.map((tag) => (
                   <li key={tag.name}>
                     <span
-                      className={`flex gap-x-2 rounded-full text-xs ${tag.className} py-1 px-2 `}
+                      className={`flex gap-x-2 rounded-full text-xs py-1 px-2 bg-background-to text-text-base border border-border-soft`}
                     >
-                      <tag.icon className="w-4 h-4" />
+                      <tag.icon className="w-4 h-4 text-accent-yellow" />
                       {tag.name}
                     </span>
                   </li>
                 ))}
               </ul>
 
-              <div className="mt-2 text-light-blue">{description}</div>
+              <div className="mt-2 text-text-secondary">{description}</div>
+
               <footer className="flex items-start mt-4 gap-x-2">
                 {links.map(({ href, label, icon: Icon }) => (
                   <LinkButton href={href} key={label}>
-                    <Icon className="w-4 h-4" />
-                    {label}
+                    <Icon className="w-4 h-4 text-accent-green" />
+                    <span className="text-text-base">{label}</span>
                   </LinkButton>
                 ))}
               </footer>
