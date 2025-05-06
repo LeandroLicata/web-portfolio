@@ -20,48 +20,48 @@ import TVEffect from "./TVEffect";
 const TAGS = {
   NEXT: {
     name: "Next.js",
-    className: "bg-black text-white",
-    icon: SiNextdotjs,
+    className: "bg-white text-black",
+    iconSrc: "/icons/next.png",
   },
   TAILWIND: {
     name: "TailwindCSS",
-    className: "bg-[#38BDF8] text-black",
-    icon: RiTailwindCssFill,
+    className: "bg-black text-[#38BDF8]",
+    iconSrc: "/icons/tailwind.png",
   },
   TYPESCRIPT: {
     name: "TypeScript",
-    className: "bg-[#2F74C0] text-white",
-    icon: SiTypescript,
+    className: "bg-white text-[#2F74C0]",
+    iconSrc: "/icons/typescript.png",
   },
   REDUX: {
     name: "Redux",
-    className: "bg-[#764ABC] text-white",
-    icon: SiRedux,
+    className: "bg-white text-[#764ABC]",
+    iconSrc: "/icons/redux.png",
   },
   NODE: {
     name: "Node.js",
     className: "bg-white text-[#689F63]",
-    icon: FaNodeJs,
+    iconSrc: "/icons/node.png",
   },
   REACT: {
     name: "React",
-    className: "bg-white text-[#149ECA]",
-    icon: FaReact,
+    className: "bg-white text-[#764ABC]",
+    iconSrc: "/icons/react.png",
   },
   BOOTSTRAP: {
     name: "Bootstrap",
-    className: "bg-[#553D7B] text-white",
-    icon: FaBootstrap,
+    className: "bg-white text-[#553D7B]",
+    iconSrc: "/icons/bootstrap.png",
   },
   MONGODB: {
     name: "MongoDB",
     className: "bg-white text-[#06232E]",
-    icon: BiLogoMongodb,
+    iconSrc: "/icons/mongo.png",
   },
   CLOUDINARY: {
     name: "Cloudinary",
     className: "bg-white text-[#3448C5]",
-    icon: SiCloudinary,
+    iconSrc: "/icons/cloudinary.png",
   },
 };
 
@@ -154,9 +154,15 @@ export default function Projects() {
                 {tags.map((tag) => (
                   <li key={tag.name}>
                     <span
-                      className={`flex gap-x-2 rounded-full text-xs py-1 px-2 bg-background-to text-text-base border border-border-soft`}
+                      className={`flex gap-x-2 rounded-full text-xs py-1 px-2 ${tag.className}`}
                     >
-                      <tag.icon className="w-4 h-4 text-accent-yellow" />
+                      {/* <tag.icon className="w-4 h-4 text-accent-yellow" /> */}
+                      <img
+                        src={tag.iconSrc}
+                        alt={tag.name}
+                        className="w-4 h-4"
+                      />
+
                       {tag.name}
                     </span>
                   </li>

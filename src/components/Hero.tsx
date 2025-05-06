@@ -1,20 +1,26 @@
 "use client";
 
 import SocialPill from "./SocialPill";
-import { FiMail } from "react-icons/fi";
-import { FaLinkedin, FaGithub, FaFilePdf } from "react-icons/fa";
 
 const socialLinks = [
-  { href: "mailto:leandrolicata1@gmail.com", icon: FiMail, label: "Mail" },
+  {
+    href: "mailto:leandrolicata1@gmail.com",
+    iconSrc: "/icons/mail.png",
+    label: "Mail",
+  },
   {
     href: "https://linkedin.com/in/leandro-licata",
-    icon: FaLinkedin,
+    iconSrc: "/icons/linkedin.png",
     label: "LinkedIn",
   },
-  { href: "https://github.com/LeandroLicata", icon: FaGithub, label: "Github" },
+  {
+    href: "https://github.com/LeandroLicata",
+    iconSrc: "/icons/github.png",
+    label: "Github",
+  },
   {
     href: "/documents/Leandro Licata CV.pdf",
-    icon: FaFilePdf,
+    iconSrc: "/icons/cv.png",
     label: "Currículum",
   },
 ];
@@ -36,9 +42,13 @@ export default function Hero() {
         </p>
 
         <nav className="flex flex-wrap gap-4 mt-8">
-          {socialLinks.map(({ href, icon: Icon, label }) => (
+          {socialLinks.map(({ href, iconSrc, label }) => (
             <SocialPill href={href} key={label}>
-              <Icon className="size-9 text-accent-green hover:text-accent-yellow transition-colors duration-200" />
+              <img
+                src={iconSrc}
+                alt={label}
+                className="w-9"
+              />
             </SocialPill>
           ))}
         </nav>
@@ -47,7 +57,7 @@ export default function Hero() {
       <img
         src="/images/avatar.png"
         alt="avatar"
-        className="w-auto h-72 hidden lg:block rounded-xl border border-border-soft shadow-lg"
+        className="w-auto h-72 hidden lg:block border border-border-soft shadow-lg"
       />
     </div>
   );
