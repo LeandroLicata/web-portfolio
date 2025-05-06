@@ -1,19 +1,3 @@
-import {
-  SiNextdotjs,
-  SiTypescript,
-  SiRedux,
-  SiCloudinary,
-} from "react-icons/si";
-import { RiTailwindCssFill } from "react-icons/ri";
-import {
-  FaGithub,
-  FaNodeJs,
-  FaReact,
-  FaBootstrap,
-  FaYoutube,
-} from "react-icons/fa";
-import { FaLink } from "react-icons/fa6";
-import { BiLogoMongodb } from "react-icons/bi";
 import LinkButton from "./LinkButton";
 import TVEffect from "./TVEffect";
 
@@ -74,7 +58,7 @@ const PROJECTS = [
       {
         href: "https://www.timbring.com/",
         label: "Preview",
-        icon: FaLink,
+        iconSrc: "/icons/link.png",
       },
     ],
     image: "/images/Timbring.png",
@@ -88,17 +72,17 @@ const PROJECTS = [
       {
         href: "https://gamepedia-gaming.vercel.app/",
         label: "Preview",
-        icon: FaLink,
+        iconSrc: "/icons/link.png",
       },
       {
         href: "https://github.com/LeandroLicata/PI-Videogames-Frontend",
         label: "Front End",
-        icon: FaGithub,
+        iconSrc: "/icons/github.png",
       },
       {
         href: "https://github.com/LeandroLicata/PI-Videogames-Backend",
         label: "Back End",
-        icon: FaGithub,
+        iconSrc: "/icons/github.png",
       },
     ],
     image: "/images/Gamepedia.png",
@@ -112,17 +96,17 @@ const PROJECTS = [
       {
         href: "https://www.youtube.com/watch?v=6JF0WrhJlw0",
         label: "Video",
-        icon: FaYoutube,
+        iconSrc: "/icons/youtube.png",
       },
       {
         href: "https://github.com/Chitichi/PFFront",
         label: "Front End",
-        icon: FaGithub,
+        iconSrc: "/icons/github.png",
       },
       {
         href: "https://github.com/Arthaz1245/ProyectoFinalGrupo14Backend",
         label: "Back End",
-        icon: FaGithub,
+        iconSrc: "/icons/github.png",
       },
     ],
     image: "/images/Novelty-Books.png",
@@ -156,13 +140,11 @@ export default function Projects() {
                     <span
                       className={`flex gap-x-2 rounded-full text-xs py-1 px-2 ${tag.className}`}
                     >
-                      {/* <tag.icon className="w-4 h-4 text-accent-yellow" /> */}
                       <img
                         src={tag.iconSrc}
                         alt={tag.name}
                         className="w-4 h-4"
                       />
-
                       {tag.name}
                     </span>
                   </li>
@@ -172,9 +154,9 @@ export default function Projects() {
               <div className="mt-2 text-text-secondary">{description}</div>
 
               <footer className="flex items-start mt-4 gap-x-2">
-                {links.map(({ href, label, icon: Icon }) => (
+                {links.map(({ href, label, iconSrc }) => (
                   <LinkButton href={href} key={label}>
-                    <Icon className="w-4 h-4 text-accent-green" />
+                    <img src={iconSrc} alt={label} className="w-4" />
                     <span className="text-text-base">{label}</span>
                   </LinkButton>
                 ))}
