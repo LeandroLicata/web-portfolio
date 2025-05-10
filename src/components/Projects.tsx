@@ -4,47 +4,47 @@ import TVEffect from "./TVEffect";
 const TAGS = {
   NEXT: {
     name: "Next.js",
-    className: "bg-white text-black",
+    className: "text-black",
     iconSrc: "/icons/next.png",
   },
   TAILWIND: {
     name: "TailwindCSS",
-    className: "bg-black text-[#38BDF8]",
+    className: "text-[#38BDF8]",
     iconSrc: "/icons/tailwind.png",
   },
   TYPESCRIPT: {
     name: "TypeScript",
-    className: "bg-white text-[#2F74C0]",
+    className: "text-[#2F74C0]",
     iconSrc: "/icons/typescript.png",
   },
   REDUX: {
     name: "Redux",
-    className: "bg-white text-[#764ABC]",
+    className: "text-[#764ABC]",
     iconSrc: "/icons/redux.png",
   },
   NODE: {
     name: "Node.js",
-    className: "bg-white text-[#689F63]",
+    className: "text-[#689F63]",
     iconSrc: "/icons/node.png",
   },
   REACT: {
     name: "React",
-    className: "bg-white text-[#764ABC]",
+    className: "text-[#764ABC]",
     iconSrc: "/icons/react.png",
   },
   BOOTSTRAP: {
     name: "Bootstrap",
-    className: "bg-white text-[#553D7B]",
+    className: "text-[#553D7B]",
     iconSrc: "/icons/bootstrap.png",
   },
   MONGODB: {
     name: "MongoDB",
-    className: "bg-white text-[#06232E]",
+    className: "text-[#06232E]",
     iconSrc: "/icons/mongo.png",
   },
   CLOUDINARY: {
     name: "Cloudinary",
-    className: "bg-white text-[#3448C5]",
+    className: "text-[#3448C5]",
     iconSrc: "/icons/cloudinary.png",
   },
 };
@@ -126,7 +126,7 @@ export default function Projects() {
             <TVEffect
               src={image}
               alt={`Imagen del proyecto ${title}`}
-              className="object-cover transition duration-500 sm:h-full rounded-lg border border-border-soft shadow-md"
+              className="object-cover transition duration-500 sm:h-full rounded-none border border-border-soft shadow-md"
             />
           </div>
 
@@ -134,11 +134,11 @@ export default function Projects() {
             <h3 className="text-2xl font-semibold text-accent-pink">{title}</h3>
 
             <div className="flex flex-wrap mt-2">
-              <ul className="grid grid-cols-3 md:grid-cols-4 gap-2">
+              <ul className="grid grid-cols-3 md:grid-cols-5 gap-2">
                 {tags.map((tag) => (
                   <li key={tag.name}>
                     <span
-                      className={`flex gap-x-2 rounded-full text-xs py-1 px-2 ${tag.className}`}
+                      className={`flex items-center justify-center gap-x-1 text-xs py-1 px-1 bg-white rounded-sm ${tag.className}`}
                     >
                       <img
                         src={tag.iconSrc}
