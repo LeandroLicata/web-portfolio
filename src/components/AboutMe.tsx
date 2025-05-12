@@ -19,7 +19,7 @@ export default function AboutMe() {
             href="https://timbring.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-accent-yellow hover:underline hover:text-accent-green transition"
+            className="text-accent-blue hover:underline hover:text-accent-green transition"
           >
             <span>Timbring</span>
           </a>
@@ -37,7 +37,7 @@ export default function AboutMe() {
             href="https://gamepedia.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-accent-yellow hover:underline hover:text-accent-green transition"
+            className="text-accent-blue hover:underline hover:text-accent-green transition"
           >
             <span>Gamepedia</span>
           </a>

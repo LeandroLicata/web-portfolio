@@ -51,7 +51,7 @@ export default function Header() {
         {navItems.map((link) => (
           <Link
             key={link.label}
-            className="relative block px-3 py-2 transition-colors duration-200 hover:text-accent-pink"
+            className="relative block px-3 py-2 transition-colors duration-200 hover:text-accent-green"
             aria-label={link.label}
             href={link.url}
           >

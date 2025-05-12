@@ -11,8 +11,8 @@ export default function LinkButton({ children, href }: LinkButtonProps) {
       href={href}
       role="link"
       target="_blank"
-      rel="noopener"
-      className="inline-flex items-center justify-center gap-2 px-3 py-2 space-x-1 text-base text-white transition bg-gray-800 border border-gray-600 focus-visible:ring-yellow-500/80 text-md hover:bg-gray-800 hover:border-gray-900 group max-w-fit rounded-xl hover:text-white focus:outline-none focus-visible:outline-none focus-visible:ring focus-visible:ring-white focus-visible:ring-offset-2 active:bg-black"
+      rel="noopener noreferrer"
+      className="inline-flex items-center gap-2 px-3 py-1 text-sm font-mono text-white border border-white rounded-sm transition-all duration-300 hover:border-cyan-400 hover:shadow-[0_0_8px_1px_rgba(0,255,255,0.6)] focus:outline-none focus:ring-2 focus:ring-cyan-400 focus:ring-offset-2"
     >
       {children}
     </a>

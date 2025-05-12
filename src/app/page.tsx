@@ -14,7 +14,7 @@ export default function Home() {
 
       <div className="space-y-24 mx-4">
         <SectionContainer id="projects">
-          <h2 className="flex items-center mb-6 text-3xl gap-x-3 text-accent-pink drop-shadow-glow">
+          <h2 className="flex items-center mb-6 text-3xl gap-x-3 text-accent-blue drop-shadow-glow">
             <img src="/icons/code.png" alt="code" className="w-8" />
             Proyectos
           </h2>
@@ -22,7 +22,7 @@ export default function Home() {
         </SectionContainer>
 
         <SectionContainer id="about-me">
-          <h2 className="flex items-center mb-6 text-3xl gap-x-3 text-accent-pink drop-shadow-glow">
+          <h2 className="flex items-center mb-6 text-3xl gap-x-3 text-accent-blue drop-shadow-glow">
             <img src="/icons/userCheck.png" alt="user" className="w-8" />
             Sobre mí
           </h2>
