@@ -11,7 +11,7 @@ interface TVEffectProps {
 const TVEffect: React.FC<TVEffectProps> = ({ src, alt, className }) => {
   return (
     <motion.div
-      className={`relative w-full h-full bg-black rounded-[30px] overflow-hidden shadow-2xl border-4 border-gray-800 ${className}`}
+      className={`relative bg-black shadow-2xl border-4 border-gray-800 ${className}`}
       initial={{ opacity: 0.8 }}
       animate={{
         opacity: [0.8, 1, 0.9, 1],

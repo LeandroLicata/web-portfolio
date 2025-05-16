@@ -44,11 +44,7 @@ export default function Hero() {
         <nav className="flex flex-wrap gap-4 mt-8">
           {socialLinks.map(({ href, iconSrc, label }) => (
             <SocialPill href={href} key={label}>
-              <img
-                src={iconSrc}
-                alt={label}
-                className="w-9"
-              />
+              <img src={iconSrc} alt={label} className="w-9" />
             </SocialPill>
           ))}
         </nav>
