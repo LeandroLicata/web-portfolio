@@ -1,6 +1,7 @@
 "use client";
 
 import SocialPill from "./SocialPill";
+import TVEffect from "./TVEffect";
 
 const socialLinks = [
   {
@@ -19,7 +20,7 @@ const socialLinks = [
     label: "Github",
   },
   {
-    href: "/documents/Leandro Licata CV.pdf",
+    href: "/documents/Leandro_Licata_CV_2025.pdf",
     iconSrc: "/icons/cv.png",
     label: "Currículum",
   },
