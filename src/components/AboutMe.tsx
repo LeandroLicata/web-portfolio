@@ -13,26 +13,25 @@ export default function AboutMe() {
 
         <p>
           Durante mi pasantía en <span>Timbring</span>, lideré la migración del
-          sistema de autenticación a <span>NextAuth</span> e implementé mejoras
-          clave en el <span>formulario de registro</span>. Estas optimizaciones
-          mejoraron significativamente la experiencia de registro e inicio de
-          sesión para cientos de usuarios.
+          sistema de autenticación a <span>NextAuth</span> y mejoré el{" "}
+          <span>formulario de registro</span>. Estas optimizaciones mejoraron
+          notablemente la experiencia de registro e inicio de sesión para
+          cientos de usuarios.
         </p>
 
         <p>
-          Actualmente estoy desarrollando un <span>e-commerce</span> desde cero,
-          aplicando tecnologías como <span>Next.js</span>,{" "}
-          <span>TypeScript</span> y <span>TailwindCSS</span>. El proyecto apunta
-          a ofrecer una experiencia fluida, con funcionalidades como{" "}
-          <span>catálogo dinámico</span>, <span>carrito de compras</span> y{" "}
-          <span>panel de administración</span>.
+          Entre mis proyectos previos, destaco <span>Gamepedia</span>, una
+          plataforma para explorar videojuegos, buscar títulos, ver información
+          y capturas de pantalla.
         </p>
 
         <p>
-          Entre mis proyectos anteriores, destaco <span>Gamepedia</span>, una
-          plataforma para explorar videojuegos que permite a los usuarios buscar
-          títulos, ver información detallada y disfrutar de capturas de
-          pantalla.
+          Actualmente desarrollo un <span>e-commerce</span> desde cero,
+          aplicando <span>Next.js</span>, <span>TypeScript</span> y{" "}
+          <span>TailwindCSS</span>. Ofrece una experiencia fluida con
+          funcionalidades como <span>catálogo dinámico</span>,{" "}
+          <span>carrito de compras</span> y <span>panel de administración</span>
+          .
         </p>
 
         <p>
