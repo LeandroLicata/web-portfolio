@@ -47,9 +47,45 @@ const TAGS = {
     className: "text-[#3448C5]",
     iconSrc: "/icons/cloudinary.png",
   },
+  PRISMA: {
+    name: "Prisma",
+    className: "text-[#0C3434]",
+    iconSrc: "/icons/prisma.png",
+  },
+  POSTGRESQL: {
+    name: "PostgreSQL",
+    className: "text-[#376888]",
+    iconSrc: "/icons/postgresql.png",
+  },
 };
 
 const PROJECTS = [
+  {
+    title: "Lean Market (en desarrollo)",
+    description:
+      "Lean-Market es un e-commerce de productos electrónicos desarrollado desde cero como proyecto personal. Construido con Next.js, TypeScript, TailwindCSS y Prisma, el proyecto tiene como objetivo simular una tienda online moderna y escalable, integrando funcionalidades como listado de productos, búsqueda, productos destacados y estructura preparada para autenticación, CRUD de productos, carrito y sistema de pagos. Actualmente se encuentra en etapas tempranas, pero continúa en desarrollo activo.",
+    links: [
+      {
+        href: "https://lean-market.vercel.app/",
+        label: "Preview",
+        iconSrc: "/icons/link.png",
+      },
+      {
+        href: "https://github.com/LeandroLicata/lean-market",
+        label: "Repositorio",
+        iconSrc: "/icons/github.png",
+      },
+    ],
+    image: "/images/Lean-Market.png",
+    tags: [
+      TAGS.NEXT,
+      TAGS.TAILWIND,
+      TAGS.TYPESCRIPT,
+      TAGS.REDUX,
+      TAGS.PRISMA,
+      TAGS.POSTGRESQL,
+    ],
+  },
   {
     title: "Timbring",
     description:
@@ -120,9 +156,9 @@ export default function Projects() {
       {PROJECTS.map(({ image, title, description, tags, links }) => (
         <article
           key={title}
-          className="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0"
+          className="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0 md:items-center"
         >
-          <div className="w-auto h-64 md:w-1/2">
+          <div className="w-auto md:h-64 md:w-1/2">
             <TVEffect
               src={image}
               alt={`Imagen del proyecto ${title}`}
