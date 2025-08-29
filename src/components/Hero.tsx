@@ -20,7 +20,7 @@ const socialLinks = [
     label: "Github",
   },
   {
-    href: "/documents/Leandro_Licata_CV_2025.pdf",
+    href: "/documents/Leandro_Licata_CV.pdf",
     iconSrc: "/icons/cv.png",
     label: "Currículum",
   },
