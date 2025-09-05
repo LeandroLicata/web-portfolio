@@ -1,7 +1,7 @@
 "use client";
 
+import { useState } from "react";
 import SocialPill from "./SocialPill";
-import TVEffect from "./TVEffect";
 
 const socialLinks = [
   {
@@ -19,14 +19,11 @@ const socialLinks = [
     iconSrc: "/icons/github.png",
     label: "Github",
   },
-  {
-    href: "/documents/Leandro_Licata_CV.pdf",
-    iconSrc: "/icons/cv.png",
-    label: "Currículum",
-  },
 ];
 
 export default function Hero() {
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
   return (
     <div className="flex items-center justify-between pt-4 lg:pt-0">
       <div className="max-w-xl flex-1">
@@ -42,12 +39,38 @@ export default function Hero() {
           <span>PostgreSQL</span> y <span>MongoDB</span>.
         </p>
 
-        <nav className="flex flex-wrap gap-4 mt-8">
+        <nav className="flex flex-wrap gap-4 mt-8 relative">
           {socialLinks.map(({ href, iconSrc, label }) => (
             <SocialPill href={href} key={label}>
               <img src={iconSrc} alt={label} className="w-9" />
             </SocialPill>
           ))}
+
+          {/* Dropdown para CV */}
+          <div className="relative">
+            <SocialPill onClick={() => setDropdownOpen(!dropdownOpen)}>
+              <img src="/icons/cv.png" alt="CV" className="w-9" />
+            </SocialPill>
+
+            {dropdownOpen && (
+              <div className="absolute mt-2 right-0 bg-white border border-border-soft rounded shadow-lg flex flex-col z-10">
+                <a
+                  href="/documents/Leandro_Licata_CV.pdf"
+                  target="_blank"
+                  className="px-4 py-2 hover:bg-accent-blue/10"
+                >
+                  CV (ES)
+                </a>
+                <a
+                  href="/documents/Leandro_Licata_CV_EN.pdf"
+                  target="_blank"
+                  className="px-4 py-2 hover:bg-accent-blue/10"
+                >
+                  CV (EN)
+                </a>
+              </div>
+            )}
+          </div>
         </nav>
       </div>
 
