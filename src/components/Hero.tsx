@@ -55,7 +55,7 @@ export default function Hero() {
             {dropdownOpen && (
               <div className="absolute mt-2 right-0 bg-white border border-border-soft rounded shadow-lg flex flex-col z-10">
                 <a
-                  href="/documents/Leandro_Licata_CV.pdf"
+                  href="/documents/Leandro_Licata_CV_ES.pdf"
                   target="_blank"
                   className="px-4 py-2 hover:bg-accent-blue/10"
                 >
