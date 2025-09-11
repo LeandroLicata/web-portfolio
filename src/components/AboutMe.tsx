@@ -5,40 +5,35 @@ export default function AboutMe() {
     <article className="flex flex-col items-center justify-center gap-8 text-text-secondary md:flex-row text-lg">
       <div className="[&>p]:mb-4 [&>p>span]:text-accent-pink order-2 md:order-1">
         <p>
-          ¡Hola! Soy <span>Leandro Licata</span>, desarrollador web con{" "}
-          <span>2 años de experiencia</span> creando aplicaciones modernas,
-          funcionales y centradas en el usuario. Me apasiona transformar ideas
-          en productos digitales bien diseñados y escalables.
+          👋 ¡Hola! Soy <span>Leandro Licata</span>,{" "}
+          <span>desarrollador web</span> enfocado en <span>React</span>,{" "}
+          <span>Next.js</span> y <span>TypeScript</span>. Me gusta crear
+          aplicaciones modernas, bien diseñadas y que realmente sean útiles para
+          la gente.
         </p>
 
         <p>
-          Durante mi pasantía en <span>Timbring</span>, lideré la migración del
-          sistema de autenticación a <span>NextAuth</span> y mejoré el{" "}
-          <span>formulario de registro</span>. Estas optimizaciones mejoraron
-          notablemente la experiencia de registro e inicio de sesión para
-          cientos de usuarios.
+          Antes de meterme de lleno en la <span>programación</span> trabajé como{" "}
+          <span>técnico de PC</span> y <span>electricista</span>, experiencias
+          que me dieron mucha práctica resolviendo problemas, aprendiendo de
+          forma autodidacta y adaptándome a distintos desafíos.
         </p>
 
         <p>
-          Entre mis proyectos previos, destaco <span>Gamepedia</span>, una
-          plataforma para explorar videojuegos, buscar títulos, ver información
-          y capturas de pantalla.
+          Durante mi <span>pasantía en Timbring</span> lideré la migración de
+          autenticación a <span>NextAuth</span> y mejoré el registro de
+          usuarios, lo que hizo más simple y seguro el inicio de sesión para
+          cientos de personas. También desarrollé <span>Gamepedia</span>, una
+          plataforma para explorar videojuegos, y ahora estoy armando un{" "}
+          <span>e-commerce</span> completo desde cero con <span>Next.js</span>,{" "}
+          <span>TailwindCSS</span> y <span>Prisma</span>.
         </p>
 
         <p>
-          Actualmente desarrollo un <span>e-commerce</span> desde cero,
-          aplicando <span>Next.js</span>, <span>TypeScript</span> y{" "}
-          <span>TailwindCSS</span>. Ofrece una experiencia fluida con
-          funcionalidades como <span>catálogo dinámico</span>,{" "}
-          <span>carrito de compras</span> y <span>panel de administración</span>
-          .
-        </p>
-
-        <p>
-          <strong>
-            Estoy abierto a nuevas oportunidades y desafíos. No dudes en
-            contactarme si creés que podríamos trabajar juntos.
-          </strong>
+          Soy <span>curioso</span>, me gusta{" "}
+          <span>aprender constantemente</span> y disfruto{" "}
+          <span>trabajar en equipo</span> para llevar ideas a proyectos reales
+          🚀.
         </p>
       </div>
 
