@@ -17,19 +17,23 @@ const config: Config = {
         background: {
           from: "#0a0f2c",
           to: "#1e0033",
+          darker: "#05081a",
         },
         text: {
           base: "#ffffff",
           secondary: "#cccccc",
+          dim: "#888888",
         },
         accent: {
           blue: "#00f0ff",
           pink: "#ff00cc",
           yellow: "#ffee00",
           green: "#00ff99",
+          purple: "#b266ff",
         },
         border: {
           soft: "#4a4a6a",
+          glow: "#00f0ff55",
         },
       },
     },

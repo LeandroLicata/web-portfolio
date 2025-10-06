@@ -2,6 +2,7 @@ import Hero from "@/components/Hero";
 import SectionContainer from "@/components/SectionContainer";
 import Projects from "@/components/Projects";
 import AboutMe from "@/components/AboutMe";
+import Chatbot from "@/components/Chatbot";
 
 export default function Home() {
   return (
@@ -29,6 +30,8 @@ export default function Home() {
           <AboutMe />
         </SectionContainer>
       </div>
+
+      <Chatbot />
     </>
   );
 }
