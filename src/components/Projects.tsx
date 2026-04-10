@@ -1,5 +1,9 @@
+"use client";
+
+import { motion } from "framer-motion";
 import LinkButton from "./LinkButton";
 import TVEffect from "./TVEffect";
+import TiltCard from "./TiltCard";
 
 const TAGS = {
   NEXT: {
@@ -150,57 +154,73 @@ const PROJECTS = [
   },
 ];
 
+const projectItem = {
+  hidden: { opacity: 0, y: 40 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] },
+  },
+};
+
 export default function Projects() {
   return (
-    <div className="flex flex-col gap-y-16">
+    <motion.div
+      className="flex flex-col gap-y-16"
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true, margin: "-80px" }}
+      transition={{ staggerChildren: 0.2 }}
+    >
       {PROJECTS.map(({ image, title, description, tags, links }) => (
-        <article
-          key={title}
-          className="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0 md:items-center"
-        >
-          <div className="w-auto md:h-64 md:w-1/2">
-            <TVEffect
-              src={image}
-              alt={`Imagen del proyecto ${title}`}
-              className="object-cover transition duration-500 sm:h-full rounded-none border border-border-soft shadow-md"
-            />
-          </div>
-
-          <div className="w-full md:w-1/2 md:max-w-lg">
-            <h3 className="text-2xl font-semibold text-accent-pink">{title}</h3>
-
-            <div className="flex flex-wrap mt-2">
-              <ul className="grid grid-cols-3 md:grid-cols-5 gap-2">
-                {tags.map((tag) => (
-                  <li key={tag.name}>
-                    <span
-                      className={`flex items-center justify-center gap-x-1 text-xs py-1 px-1 bg-white rounded-sm ${tag.className}`}
-                    >
-                      <img
-                        src={tag.iconSrc}
-                        alt={tag.name}
-                        className="w-4 h-4"
-                      />
-                      {tag.name}
-                    </span>
-                  </li>
-                ))}
-              </ul>
-
-              <div className="mt-2 text-text-secondary">{description}</div>
-
-              <footer className="flex items-start mt-4 gap-x-2">
-                {links.map(({ href, label, iconSrc }) => (
-                  <LinkButton href={href} key={label}>
-                    <img src={iconSrc} alt={label} className="w-4" />
-                    <span className="text-text-base">{label}</span>
-                  </LinkButton>
-                ))}
-              </footer>
+        <motion.div key={title} variants={projectItem}>
+          <TiltCard className="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0 md:items-center">
+            <div className="w-auto md:h-64 md:w-1/2">
+              <TVEffect
+                src={image}
+                alt={`Imagen del proyecto ${title}`}
+                className="object-cover transition duration-500 sm:h-full rounded-none border border-border-soft shadow-md"
+              />
             </div>
-          </div>
-        </article>
+
+            <div className="w-full md:w-1/2 md:max-w-lg">
+              <h3 className="text-2xl font-semibold text-accent-pink">
+                {title}
+              </h3>
+
+              <div className="flex flex-wrap mt-2">
+                <ul className="grid grid-cols-3 md:grid-cols-5 gap-2">
+                  {tags.map((tag) => (
+                    <li key={tag.name}>
+                      <span
+                        className={`flex items-center justify-center gap-x-1 text-xs py-1 px-1 bg-white rounded-sm ${tag.className}`}
+                      >
+                        <img
+                          src={tag.iconSrc}
+                          alt={tag.name}
+                          className="w-4 h-4"
+                        />
+                        {tag.name}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="mt-2 text-text-secondary">{description}</div>
+
+                <footer className="flex items-start mt-4 gap-x-2">
+                  {links.map(({ href, label, iconSrc }) => (
+                    <LinkButton href={href} key={label}>
+                      <img src={iconSrc} alt={label} className="w-4" />
+                      <span className="text-text-base">{label}</span>
+                    </LinkButton>
+                  ))}
+                </footer>
+              </div>
+            </div>
+          </TiltCard>
+        </motion.div>
       ))}
-    </div>
+    </motion.div>
   );
 }

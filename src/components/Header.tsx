@@ -10,6 +10,16 @@ const navItems = [
     url: "/#home",
   },
   {
+    title: "Experiencia",
+    label: "experience",
+    url: "/#experience",
+  },
+  {
+    title: "Educación",
+    label: "education",
+    url: "/#education",
+  },
+  {
     title: "Proyectos",
     label: "projects",
     url: "/#projects",
