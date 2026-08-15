@@ -1,54 +1,62 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Badge from "./Badge";
+import TechChip from "./TechChip";
 
-interface Tag {
-  name: string;
-  iconSrc?: string;
-}
-
-const TAGS: Record<string, Tag> = {
-  NEXT: { name: "Next.js", iconSrc: "/icons/next.png" },
-  TAILWIND: { name: "TailwindCSS", iconSrc: "/icons/tailwind.png" },
-  TYPESCRIPT: { name: "TypeScript", iconSrc: "/icons/typescript.png" },
-  NESTJS: { name: "NestJS" },
-  TYPEORM: { name: "TypeORM" },
-  PRISMA: { name: "Prisma", iconSrc: "/icons/prisma.png" },
-  POSTGRESQL: { name: "PostgreSQL", iconSrc: "/icons/postgresql.png" },
-  REACT: { name: "React", iconSrc: "/icons/react.png" },
-  REDUX: { name: "Redux", iconSrc: "/icons/redux.png" },
-  NODE: { name: "Node.js", iconSrc: "/icons/node.png" },
-};
+// Los nombres tienen que coincidir con las claves de `techIcons`.
+const TAGS = {
+  NEXT: "Next.js",
+  TAILWIND: "TailwindCSS",
+  TYPESCRIPT: "TypeScript",
+  NESTJS: "NestJS",
+  TYPEORM: "TypeORM",
+  VITEST: "Vitest",
+  JEST: "Jest",
+  PLAYWRIGHT: "Playwright",
+  SOCKETIO: "Socket.IO",
+  STRIPE: "Stripe",
+  PRISMA: "Prisma",
+  POSTGRESQL: "PostgreSQL",
+  REACT: "React",
+  REDUX: "Redux",
+  NODE: "Node.js",
+} as const;
 
 const EXPERIENCES = [
   {
-    title: "Desarrollador Web",
+    title: "Desarrollador Web Full Stack",
     company: "Olalingo",
-    date: "Diciembre 2025 — Presente",
+    date: "Diciembre 2025 — Julio 2026",
     description:
-      "Participé en múltiples proyectos (Olalingo Online, Olalingo Campus y el panel de administración) como desarrollador remoto.",
+      "Plataforma de e-learning de idiomas. Trabajé en remoto sobre 7 repositorios (Olalingo Online, Olalingo Campus y el panel de administración), tocando el stack completo: Next.js y NestJS sobre PostgreSQL.",
     tasks: [
-      "Migré el sistema de autenticación a NextAuth implementando access tokens y refresh tokens con JWT.",
-      "Migré el panel de administración desde PHP + React a Next.js, unificando sistemas.",
-      "Implementé tests unitarios y end-to-end en 5 repositorios (frontend y backend de ambos proyectos y admin).",
-      "Corregí bugs y mejoré la arquitectura general del sistema.",
-      "Utilicé herramientas de desarrollo asistido por IA (Claude Code) para acelerar debugging, generación de tests y refactorización.",
+      "Reconstruí el panel de administración desde cero, migrándolo de PHP + React a Next.js: ~20 módulos (cursos, clases, pagos, estadísticas, soporte) entregados y responsive en poco más de un mes.",
+      "Construí la capa de pagos multi-proveedor que abstrajo Stripe y MercadoPago detrás de una sola interfaz, con ledger de transacciones escrito desde los webhooks y circuito de retiros y comisiones para profesores.",
+      "Implementé el chat de soporte en tiempo real con WebSockets, indicadores de presencia en línea y notificaciones in-app por email.",
+      "Llevé el testing a 5 repositorios con Vitest, Playwright y Jest — incluida una suite e2e de 37 suites y 232 tests en el backend de Campus.",
+      "Corregí una clase entera de bugs de zonas horarias fijando un contrato UTC de punta a punta, e hice atómica la reserva de clases para eliminar las dobles reservas por concurrencia.",
+      "Saneé la base de código heredada: 433 errores de ESLint resueltos, tipado estricto en lugar de any, vulnerabilidades de dependencias y expiración de JWT en tokens de admin.",
+      "Usé desarrollo asistido por IA (Claude Code) como parte del flujo diario para debugging, generación de tests y refactors grandes.",
     ],
     tags: [
       TAGS.NEXT,
-      TAGS.TAILWIND,
       TAGS.TYPESCRIPT,
       TAGS.NESTJS,
+      TAGS.POSTGRESQL,
       TAGS.TYPEORM,
       TAGS.PRISMA,
-      TAGS.POSTGRESQL,
+      TAGS.SOCKETIO,
+      TAGS.STRIPE,
+      TAGS.VITEST,
+      TAGS.PLAYWRIGHT,
+      TAGS.JEST,
+      TAGS.TAILWIND,
     ],
   },
   {
     title: "Pasante — Desarrollador Web",
     company: "Timbring",
-    date: "2024",
+    date: "Julio — Noviembre 2024",
     description:
       "Trabajé en un servicio de optimización de entregas para e-commerce.",
     tasks: [
@@ -111,20 +119,13 @@ export default function Experience() {
               ))}
             </ul>
 
-            <div className="flex flex-wrap gap-2">
+            <ul className="flex flex-wrap gap-2">
               {tags.map((tag) => (
-                <Badge key={tag.name}>
-                  {tag.iconSrc && (
-                    <img
-                      src={tag.iconSrc}
-                      alt={tag.name}
-                      className="w-4 h-4"
-                    />
-                  )}
-                  {tag.name}
-                </Badge>
+                <li key={tag}>
+                  <TechChip name={tag} />
+                </li>
               ))}
-            </div>
+            </ul>
           </motion.article>
         ))}
       </motion.div>
