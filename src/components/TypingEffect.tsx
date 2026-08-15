@@ -44,10 +44,27 @@ export default function TypingEffect({
     return () => clearTimeout(timeout);
   }, [displayText, isDeleting, textIndex, texts, typingSpeed, deletingSpeed, pauseDuration]);
 
+  // El texto más largo de la lista, usado como molde invisible.
+  const longest = texts.reduce((a, b) => (b.length > a.length ? b : a), "");
+
   return (
-    <span>
-      {displayText}
-      <span className="animate-pulse text-accent-blue">▌</span>
+    <span className="inline-grid">
+      {/*
+        Reserva el espacio del texto más largo. Sin esto el párrafo cambia de
+        alto mientras se escribe —pasa de uno a dos renglones— y ese salto
+        empuja hacia abajo todas las secciones siguientes.
+        Ambos hijos comparten la misma celda del grid, así que se superponen y
+        la caja siempre mide lo que mide el molde.
+      */}
+      <span aria-hidden="true" className="invisible col-start-1 row-start-1">
+        {longest}▌
+      </span>
+      <span className="col-start-1 row-start-1">
+        {displayText}
+        <span aria-hidden="true" className="animate-pulse text-accent-blue">
+          ▌
+        </span>
+      </span>
     </span>
   );
 }
