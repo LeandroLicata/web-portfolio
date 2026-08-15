@@ -3,6 +3,7 @@ import { VT323 } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { SITE } from "@/lib/site";
 
 const vt323 = VT323({
   weight: "400",
@@ -11,8 +12,71 @@ const vt323 = VT323({
 });
 
 export const metadata: Metadata = {
-  title: "Leandro Licata Portfolio",
-  description: "Portfolio web de Lendro Licata Full Stack Developer.",
+  metadataBase: new URL(SITE.url),
+  title: {
+    default: `${SITE.name} — ${SITE.role}`,
+    template: `%s | ${SITE.name}`,
+  },
+  description: SITE.description,
+  keywords: [
+    "Leandro Licata",
+    "desarrollador full stack",
+    "full stack developer",
+    "React",
+    "Next.js",
+    "TypeScript",
+    "NestJS",
+    "PostgreSQL",
+    "desarrollador remoto",
+    "Argentina",
+  ],
+  authors: [{ name: SITE.name, url: SITE.url }],
+  creator: SITE.name,
+  alternates: {
+    canonical: "/",
+  },
+  openGraph: {
+    type: "website",
+    locale: "es_AR",
+    url: SITE.url,
+    siteName: `${SITE.name} — Portfolio`,
+    title: `${SITE.name} — ${SITE.role}`,
+    description: SITE.description,
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${SITE.name} — ${SITE.role}`,
+    description: SITE.description,
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: { index: true, follow: true },
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: SITE.name,
+  jobTitle: SITE.role,
+  url: SITE.url,
+  email: `mailto:${SITE.email}`,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Mendoza",
+    addressCountry: "AR",
+  },
+  sameAs: [SITE.linkedin, SITE.github],
+  knowsAbout: [
+    "React",
+    "Next.js",
+    "TypeScript",
+    "NestJS",
+    "Node.js",
+    "PostgreSQL",
+    "TailwindCSS",
+  ],
 };
 
 export default function RootLayout({
@@ -21,11 +85,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="es">
       <body className={vt323.className}>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <Header />
         {children}
         <Footer />
+        {/*
+          Chatbot desmontado a propósito: el escenario de Make.com detrás de
+          CHATBOT_WEBHOOK está fallando y devuelve texto plano en lugar de JSON,
+          así que el widget contesta "Ocurrió un error" a cualquier mensaje.
+          El componente y la API route quedan en el repo; para reactivarlo,
+          arreglá el escenario en Make y volvé a montar <Chatbot /> acá.
+        */}
       </body>
     </html>
   );

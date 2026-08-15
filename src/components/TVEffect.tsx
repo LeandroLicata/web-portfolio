@@ -1,15 +1,28 @@
 "use client";
 
 import { useId } from "react";
+import Image from "next/image";
 import { motion } from "framer-motion";
 
 interface TVEffectProps {
   src: string;
   alt: string;
   className?: string;
+  width: number;
+  height: number;
+  sizes?: string;
+  priority?: boolean;
 }
 
-const TVEffect: React.FC<TVEffectProps> = ({ src, alt, className }) => {
+const TVEffect: React.FC<TVEffectProps> = ({
+  src,
+  alt,
+  className,
+  width,
+  height,
+  sizes,
+  priority,
+}) => {
   const filterId = useId().replace(/:/g, "");
 
   return (
@@ -95,9 +108,13 @@ const TVEffect: React.FC<TVEffectProps> = ({ src, alt, className }) => {
           animation: "crt-flicker 3s infinite",
         }}
       >
-        <img
+        <Image
           src={src}
           alt={alt}
+          width={width}
+          height={height}
+          sizes={sizes}
+          priority={priority}
           className="w-full h-full object-cover saturate-125 contrast-110 brightness-105 block"
         />
       </div>

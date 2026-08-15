@@ -1,86 +1,69 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ExternalLink, Github, Youtube } from "lucide-react";
 import LinkButton from "./LinkButton";
 import TVEffect from "./TVEffect";
 import TiltCard from "./TiltCard";
+import TechChip from "./TechChip";
 
+// Los nombres tienen que coincidir con las claves de `techIcons`.
 const TAGS = {
-  NEXT: {
-    name: "Next.js",
-    className: "text-black",
-    iconSrc: "/icons/next.png",
-  },
-  TAILWIND: {
-    name: "TailwindCSS",
-    className: "text-[#38BDF8]",
-    iconSrc: "/icons/tailwind.png",
-  },
-  TYPESCRIPT: {
-    name: "TypeScript",
-    className: "text-[#2F74C0]",
-    iconSrc: "/icons/typescript.png",
-  },
-  REDUX: {
-    name: "Redux",
-    className: "text-[#764ABC]",
-    iconSrc: "/icons/redux.png",
-  },
-  NODE: {
-    name: "Node.js",
-    className: "text-[#689F63]",
-    iconSrc: "/icons/node.png",
-  },
-  REACT: {
-    name: "React",
-    className: "text-[#764ABC]",
-    iconSrc: "/icons/react.png",
-  },
-  BOOTSTRAP: {
-    name: "Bootstrap",
-    className: "text-[#553D7B]",
-    iconSrc: "/icons/bootstrap.png",
-  },
-  MONGODB: {
-    name: "MongoDB",
-    className: "text-[#06232E]",
-    iconSrc: "/icons/mongo.png",
-  },
-  CLOUDINARY: {
-    name: "Cloudinary",
-    className: "text-[#3448C5]",
-    iconSrc: "/icons/cloudinary.png",
-  },
-  PRISMA: {
-    name: "Prisma",
-    className: "text-[#0C3434]",
-    iconSrc: "/icons/prisma.png",
-  },
-  POSTGRESQL: {
-    name: "PostgreSQL",
-    className: "text-[#376888]",
-    iconSrc: "/icons/postgresql.png",
-  },
-};
+  NEXT: "Next.js",
+  TAILWIND: "TailwindCSS",
+  TYPESCRIPT: "TypeScript",
+  REDUX: "Redux",
+  NODE: "Node.js",
+  REACT: "React",
+  BOOTSTRAP: "Bootstrap",
+  MONGODB: "MongoDB",
+  CLOUDINARY: "Cloudinary",
+  PRISMA: "Prisma",
+  POSTGRESQL: "PostgreSQL",
+} as const;
+
+const ICONS = {
+  link: ExternalLink,
+  github: Github,
+  youtube: Youtube,
+} as const;
 
 const PROJECTS = [
   {
-    title: "Lean Market (en desarrollo)",
+    title: "Timbring",
     description:
-      "Lean-Market es un e-commerce de productos electrónicos desarrollado desde cero como proyecto personal. Construido con Next.js, TypeScript, TailwindCSS y Prisma, el proyecto tiene como objetivo simular una tienda online moderna y escalable, integrando funcionalidades como listado de productos, búsqueda, productos destacados y estructura preparada para autenticación, CRUD de productos, carrito y sistema de pagos. Actualmente se encuentra en etapas tempranas, pero continúa en desarrollo activo.",
+      "Servicio de optimización de entregas para e-commerce, con usuarios reales en producción. Lideré la migración del sistema de autenticación de Auth0 a NextAuth, construí la landing responsive y el formulario de registro con validaciones, e implementé el flujo de recuperación de contraseñas.",
+    links: [
+      {
+        href: "https://www.timbring.com/",
+        label: "Ver sitio",
+        icon: "link" as const,
+      },
+    ],
+    image: "/images/Timbring.png",
+    width: 960,
+    height: 540,
+    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.REDUX, TAGS.NODE],
+  },
+  {
+    title: "Lean Market",
+    description:
+      "E-commerce de productos electrónicos que armé desde cero para practicar una arquitectura full stack completa: catálogo con búsqueda y filtros, productos destacados, y capa de datos con Prisma sobre PostgreSQL. En desarrollo activo — próximos pasos: carrito, checkout y panel de administración.",
     links: [
       {
         href: "https://lean-market.vercel.app/",
-        label: "Preview",
-        iconSrc: "/icons/link.png",
+        label: "Ver sitio",
+        icon: "link" as const,
       },
       {
         href: "https://github.com/LeandroLicata/lean-market",
-        label: "Repositorio",
-        iconSrc: "/icons/github.png",
+        label: "Código",
+        icon: "github" as const,
       },
     ],
     image: "/images/Lean-Market.png",
+    width: 1920,
+    height: 1080,
     tags: [
       TAGS.NEXT,
       TAGS.TAILWIND,
@@ -91,65 +74,55 @@ const PROJECTS = [
     ],
   },
   {
-    title: "Timbring",
-    description:
-      "Trabajé en Timbring, un servicio de optimización de entregas en e-commerce. Desarrollé la página de inicio con diseño responsivo, un formulario de registro con validaciones, y migré la autenticación de Auth0 a NextAuth para mejorar la experiencia del usuario. También implementé un sistema de recuperación de contraseñas y apoyé a mis compañeros con Next.js y Redux Toolkit.",
-    links: [
-      {
-        href: "https://www.timbring.com/",
-        label: "Preview",
-        iconSrc: "/icons/link.png",
-      },
-    ],
-    image: "/images/Timbring.png",
-    tags: [TAGS.NEXT, TAGS.TAILWIND, TAGS.TYPESCRIPT, TAGS.REDUX, TAGS.NODE],
-  },
-  {
     title: "Gamepedia",
     description:
-      "Desarrollé un proyecto personal utilizando la API de RAWG donde los usuarios pueden explorar videojuegos, ver detalles e imágenes, realizar búsquedas con filtros y agregar juegos a la base de datos.",
+      "Buscador de videojuegos sobre la API de RAWG. Los usuarios exploran títulos con filtros combinados, ven el detalle de cada juego y pueden dar de alta los suyos propios. Full stack propio: SPA en React con Redux y API en Node sobre MongoDB.",
     links: [
       {
         href: "https://gamepedia-gaming.vercel.app/",
-        label: "Preview",
-        iconSrc: "/icons/link.png",
+        label: "Ver sitio",
+        icon: "link" as const,
       },
       {
         href: "https://github.com/LeandroLicata/PI-Videogames-Frontend",
-        label: "Front End",
-        iconSrc: "/icons/github.png",
+        label: "Front",
+        icon: "github" as const,
       },
       {
         href: "https://github.com/LeandroLicata/PI-Videogames-Backend",
-        label: "Back End",
-        iconSrc: "/icons/github.png",
+        label: "Back",
+        icon: "github" as const,
       },
     ],
     image: "/images/Gamepedia.png",
+    width: 960,
+    height: 540,
     tags: [TAGS.REACT, TAGS.BOOTSTRAP, TAGS.REDUX, TAGS.NODE, TAGS.MONGODB],
   },
   {
     title: "Novelty Books",
     description:
-      "Como parte de mi formación en programación, participé en un proyecto final grupal llamado Novelty Books junto a mis compañeros de Henry. En este proyecto desarrollamos un e-commerce de libros físicos, aplicando diversas herramientas y técnicas de programación.",
+      "E-commerce de libros desarrollado en equipo como proyecto final de Henry, trabajando con metodología ágil y control de versiones compartido. Incluye catálogo, carrito, gestión de usuarios y carga de imágenes con Cloudinary.",
     links: [
       {
         href: "https://www.youtube.com/watch?v=6JF0WrhJlw0",
-        label: "Video",
-        iconSrc: "/icons/youtube.png",
+        label: "Demo",
+        icon: "youtube" as const,
       },
       {
         href: "https://github.com/Chitichi/PFFront",
-        label: "Front End",
-        iconSrc: "/icons/github.png",
+        label: "Front",
+        icon: "github" as const,
       },
       {
         href: "https://github.com/Arthaz1245/ProyectoFinalGrupo14Backend",
-        label: "Back End",
-        iconSrc: "/icons/github.png",
+        label: "Back",
+        icon: "github" as const,
       },
     ],
     image: "/images/Novelty-Books.png",
+    width: 960,
+    height: 540,
     tags: [TAGS.MONGODB, TAGS.NODE, TAGS.CLOUDINARY, TAGS.NEXT, TAGS.BOOTSTRAP],
   },
 ];
@@ -172,55 +145,52 @@ export default function Projects() {
       viewport={{ once: true, margin: "-80px" }}
       transition={{ staggerChildren: 0.2 }}
     >
-      {PROJECTS.map(({ image, title, description, tags, links }) => (
-        <motion.div key={title} variants={projectItem}>
-          <TiltCard className="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0 md:items-center">
-            <div className="w-auto md:h-64 md:w-1/2">
-              <TVEffect
-                src={image}
-                alt={`Imagen del proyecto ${title}`}
-                className="object-cover transition duration-500 sm:h-full rounded-none border border-border-soft shadow-md"
-              />
-            </div>
+      {PROJECTS.map(
+        ({ image, width, height, title, description, tags, links }) => (
+          <motion.div key={title} variants={projectItem}>
+            <TiltCard className="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0 md:items-center">
+              <div className="w-auto md:h-64 md:w-1/2">
+                <TVEffect
+                  src={image}
+                  alt={`Captura del proyecto ${title}`}
+                  className="object-cover transition duration-500 sm:h-full rounded-none border border-border-soft shadow-md"
+                  width={width}
+                  height={height}
+                  sizes="(max-width: 768px) 100vw, 400px"
+                />
+              </div>
 
-            <div className="w-full md:w-1/2 md:max-w-lg">
-              <h3 className="text-2xl font-semibold text-accent-pink">
-                {title}
-              </h3>
+              <div className="w-full md:w-1/2 md:max-w-lg">
+                <h3 className="text-2xl font-semibold text-accent-pink">
+                  {title}
+                </h3>
 
-              <div className="flex flex-wrap mt-2">
-                <ul className="grid grid-cols-3 md:grid-cols-5 gap-2">
+                <ul className="flex flex-wrap gap-2 mt-2">
                   {tags.map((tag) => (
-                    <li key={tag.name}>
-                      <span
-                        className={`flex items-center justify-center gap-x-1 text-xs py-1 px-1 bg-white rounded-sm ${tag.className}`}
-                      >
-                        <img
-                          src={tag.iconSrc}
-                          alt={tag.name}
-                          className="w-4 h-4"
-                        />
-                        {tag.name}
-                      </span>
+                    <li key={tag}>
+                      <TechChip name={tag} />
                     </li>
                   ))}
                 </ul>
 
-                <div className="mt-2 text-text-secondary">{description}</div>
+                <p className="mt-3 text-text-secondary">{description}</p>
 
-                <footer className="flex items-start mt-4 gap-x-2">
-                  {links.map(({ href, label, iconSrc }) => (
-                    <LinkButton href={href} key={label}>
-                      <img src={iconSrc} alt={label} className="w-4" />
-                      <span className="text-text-base">{label}</span>
-                    </LinkButton>
-                  ))}
+                <footer className="flex flex-wrap items-start mt-4 gap-2">
+                  {links.map(({ href, label, icon }) => {
+                    const Icon = ICONS[icon];
+                    return (
+                      <LinkButton href={href} key={label}>
+                        <Icon size={16} aria-hidden="true" />
+                        <span className="text-text-base">{label}</span>
+                      </LinkButton>
+                    );
+                  })}
                 </footer>
               </div>
-            </div>
-          </TiltCard>
-        </motion.div>
-      ))}
+            </TiltCard>
+          </motion.div>
+        )
+      )}
     </motion.div>
   );
 }

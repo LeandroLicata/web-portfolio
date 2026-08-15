@@ -1,25 +1,29 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import SocialPill from "./SocialPill";
 import TVEffect from "./TVEffect";
 import TypingEffect from "./TypingEffect";
+import { SITE } from "@/lib/site";
 
 const socialLinks = [
   {
-    href: "mailto:leandrolicata1@gmail.com",
+    href: `mailto:${SITE.email}`,
     iconSrc: "/icons/mail.png",
     label: "Mail",
   },
   {
-    href: "https://linkedin.com/in/leandro-licata",
+    href: SITE.linkedin,
     iconSrc: "/icons/linkedin.png",
     label: "LinkedIn",
   },
   {
-    href: "https://github.com/LeandroLicata",
+    href: SITE.github,
     iconSrc: "/icons/github.png",
     label: "Github",
+    // El logo es negro y sobre este fondo desaparece.
+    invert: true,
   },
 ];
 
@@ -95,28 +99,42 @@ export default function Hero() {
         </motion.p>
 
         <motion.p variants={fadeUp} className="mt-3 text-text-dim">
-          De Mendoza, Argentina. Creando aplicaciones web modernas y escalables.
+          Desde Mendoza, Argentina (GMT-3). Construyo aplicaciones web modernas
+          y escalables, en remoto para equipos de cualquier parte del mundo o
+          presencial e híbrido en Mendoza.
         </motion.p>
 
         <motion.nav
           variants={fadeUp}
           className="flex flex-wrap gap-4 mt-8 items-center"
         >
-          {socialLinks.map(({ href, iconSrc, label }) => (
-            <SocialPill href={href} key={label}>
-              <img src={iconSrc} alt={label} className="w-9" />
+          {socialLinks.map(({ href, iconSrc, label, invert }) => (
+            <SocialPill href={href} key={label} title={label}>
+              <Image
+                src={iconSrc}
+                alt={label}
+                width={36}
+                height={36}
+                className={`w-9 h-auto ${invert ? "invert" : ""}`}
+              />
             </SocialPill>
           ))}
 
           <span className="text-border-soft hidden sm:inline">|</span>
 
-          <SocialPill href="/documents/Leandro_Licata_CV_ES.pdf">
-            <img src="/icons/cv.png" alt="CV" className="w-9" />
-            <span className="text-text-secondary text-sm">ES</span>
+          <SocialPill
+            href="/documents/Leandro_Licata_CV_ES.pdf"
+            title="Descargar CV en español"
+          >
+            <Image src="/icons/cv.png" alt="" width={36} height={39} className="w-9 h-auto" />
+            <span className="text-text-secondary text-sm">CV · ES</span>
           </SocialPill>
-          <SocialPill href="/documents/Leandro_Licata_CV_EN.pdf">
-            <img src="/icons/cv.png" alt="CV" className="w-9" />
-            <span className="text-text-secondary text-sm">EN</span>
+          <SocialPill
+            href="/documents/Leandro_Licata_CV_EN.pdf"
+            title="Download CV in English"
+          >
+            <Image src="/icons/cv.png" alt="" width={36} height={39} className="w-9 h-auto" />
+            <span className="text-text-secondary text-sm">CV · EN</span>
           </SocialPill>
         </motion.nav>
       </motion.div>
@@ -131,6 +149,10 @@ export default function Hero() {
           src="/images/avatar.png"
           alt="Leandro Licata"
           className="h-72 w-64"
+          width={1024}
+          height={1024}
+          sizes="256px"
+          priority
         />
       </motion.div>
     </div>
