@@ -18,6 +18,12 @@ body {
   /* background-color: rgb(var(--background-color)); */
   background: linear-gradient(to bottom right, #0a0f2c, #1e0033);
   min-height: 100vh;
+  /* Tiene que coincidir con `base` de fontSize en tailwind.config.ts.
+     Sin esto, todo el texto que no lleva una clase text-* explícita —que es
+     buena parte del cuerpo en Experiencia y Proyectos— se queda en los 16px
+     por defecto del navegador y se ve más chico que los `text-sm` de al lado. */
+  font-size: 1.25rem;
+  line-height: 1.8rem;
 }
 
 @layer utilities {
