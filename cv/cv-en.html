@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Leandro Licata — CV</title>
+    <link rel="stylesheet" href="cv.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Leandro Licata</h1>
+      <p class="role">
+        Full Stack Web Developer — Next.js · NestJS · TypeScript · PostgreSQL
+      </p>
+      <p class="contact">
+        <span
+          >Mendoza, Argentina (GMT-3) — remote, hybrid or on-site</span
+        >
+        <span>leandrolicata1@gmail.com</span>
+        <span>+54 9 261 715 3984</span>
+      </p>
+      <p class="contact">
+        <span>linkedin.com/in/leandro-licata</span>
+        <span>github.com/LeandroLicata</span>
+        <span>leandro-licata-portfolio.vercel.app</span>
+      </p>
+    </header>
+
+    <h2>Summary</h2>
+    <p class="summary">
+      Full stack developer focused on TypeScript: React and Next.js on the
+      client, NestJS and PostgreSQL on the server. I come from a production
+      e-learning platform where I owned features end to end —from the database
+      to the interface— across seven repositories and a fair amount of
+      inherited code. I work with automated testing and I am comfortable taking
+      on complex features and getting them shipped. Fully remote on distributed
+      teams; also open to hybrid or on-site roles in Mendoza, Argentina.
+    </p>
+
+    <h2>Experience</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title"
+          >Full Stack Web Developer <span class="at">— Olalingo</span></span
+        >
+        <span class="entry-date">Dec 2025 – Jul 2026 · Remote</span>
+      </div>
+      <ul>
+        <li>
+          Rebuilt the admin panel, migrating it from PHP + React to Next.js:
+          around 20 modules (courses, classes, payments, statistics, support)
+          shipped and made responsive in just over a month.
+        </li>
+        <li>
+          Built the multi-provider payment layer that abstracted Stripe and
+          MercadoPago behind a single interface, with a transaction ledger
+          written from webhooks and a full teacher payout and commission flow.
+        </li>
+        <li>
+          Implemented real-time support chat over WebSockets, with online
+          presence indicators and in-app and email notifications.
+        </li>
+        <li>
+          Brought testing to 5 repositories with Vitest, Playwright and Jest,
+          including an end-to-end suite of 37 suites and 232 tests on the Campus
+          backend.
+        </li>
+        <li>
+          Eliminated an entire class of timezone bugs by pinning a UTC contract
+          end to end, and made class booking atomic to remove double bookings
+          under concurrency.
+        </li>
+        <li>
+          Migrated authentication to NextAuth with JWT access and refresh tokens
+          across two platforms.
+        </li>
+        <li>
+          Cleaned up inherited code: 433 ESLint errors resolved, strict typing
+          replacing <em>any</em>, dependency vulnerabilities patched, and JWT
+          expiration enforced on admin tokens.
+        </li>
+      </ul>
+      <p class="stack">
+        <strong>Stack:</strong> Next.js, TypeScript, NestJS, PostgreSQL,
+        Prisma, TypeORM, Socket.IO, Stripe, MercadoPago, Vitest, Playwright
+      </p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title"
+          >Web Developer, internship <span class="at">— Timbring</span></span
+        >
+        <span class="entry-date">Jul – Nov 2024</span>
+      </div>
+      <ul>
+        <li>
+          Led the migration of the authentication system from Auth0 to NextAuth
+          on a platform with real users in production.
+        </li>
+        <li>
+          Built the responsive landing page and the sign-up form with
+          validation.
+        </li>
+        <li>Implemented the password recovery flow.</li>
+        <li>Supported the rest of the team with Next.js and Redux Toolkit.</li>
+      </ul>
+      <p class="stack">
+        <strong>Stack:</strong> Next.js, TypeScript, TailwindCSS, Redux Toolkit,
+        Node.js
+      </p>
+    </div>
+
+    <h2>Personal Project</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title"
+          >Lean Market <span class="at">— e-commerce (in progress)</span></span
+        >
+        <span class="entry-date">lean-market.vercel.app</span>
+      </div>
+      <ul>
+        <li>
+          E-commerce built from scratch: product catalogue with search and
+          filters, featured products, and a data layer with Prisma on
+          PostgreSQL. Next up: cart, checkout and admin panel.
+        </li>
+      </ul>
+      <p class="stack">
+        <strong>Stack:</strong> Next.js, TypeScript, TailwindCSS, Prisma,
+        PostgreSQL
+      </p>
+    </div>
+
+    <h2>Technical Skills</h2>
+    <div class="rows">
+      <div>
+        <strong>Frontend:</strong> TypeScript, JavaScript (ES6+), React,
+        Next.js, Redux Toolkit, TailwindCSS, responsive design
+      </div>
+      <div>
+        <strong>Backend:</strong> Node.js, NestJS, REST APIs, NextAuth / JWT,
+        WebSockets (Socket.IO), Stripe and MercadoPago (webhooks and
+        reconciliation)
+      </div>
+      <div>
+        <strong>Data:</strong> PostgreSQL, MongoDB, Prisma, TypeORM, SQL
+      </div>
+      <div>
+        <strong>Testing:</strong> Vitest, Jest, Playwright, Testing Library,
+        Supertest
+      </div>
+      <div>
+        <strong>Tools:</strong> Git, GitHub, Docker, Vercel, Postman, CI/CD,
+        Claude Code
+      </div>
+    </div>
+
+    <h2>Education &amp; Languages</h2>
+    <ul class="compact">
+      <li>
+        Higher Technical Degree in Software Development — Instituto Superior
+        Manuel Belgrano (2026 – ongoing)
+      </li>
+      <li>Full Stack Web Developer — Henry Bootcamp (2022 – 2023)</li>
+      <li>
+        PC Repair Technician (2015) and Electrician Technician, electronics
+        orientation (2012) — Mendoza, Argentina
+      </li>
+      <li>
+        <strong>Languages:</strong> Spanish native · English advanced (reading,
+        writing, speaking)
+      </li>
+    </ul>
+  </body>
+</html>

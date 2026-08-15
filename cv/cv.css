@@ -1,0 +1,159 @@
+/* Hoja de estilos compartida por los CV en ES y EN.
+   Pensada para impresión A4 y para pasar parsers de ATS:
+   una sola columna, texto real, sin tablas ni iconos. */
+
+@page {
+  size: A4;
+  margin: 12mm 13mm;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+body {
+  margin: 0;
+  font-family: "Calibri", "Carlito", "Helvetica Neue", Arial, sans-serif;
+  font-size: 9.6pt;
+  line-height: 1.34;
+  color: #1a1a1a;
+}
+
+a {
+  color: #1f4e79;
+  text-decoration: none;
+}
+
+/* ---------- Encabezado ---------- */
+
+header {
+  border-bottom: 2px solid #1f4e79;
+  padding-bottom: 5px;
+  margin-bottom: 9px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 20pt;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+  color: #1f4e79;
+}
+
+.role {
+  margin: 3px 0 0;
+  font-size: 10.8pt;
+  color: #333;
+}
+
+.contact {
+  margin: 6px 0 0;
+  font-size: 9.3pt;
+  color: #444;
+}
+
+.contact span:not(:last-child)::after {
+  content: " · ";
+  color: #999;
+}
+
+/* ---------- Secciones ---------- */
+
+h2 {
+  margin: 10px 0 5px;
+  font-size: 10.6pt;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  color: #1f4e79;
+  border-bottom: 1px solid #c8d4e0;
+  padding-bottom: 2px;
+}
+
+.summary {
+  margin: 0;
+  text-align: justify;
+}
+
+/* ---------- Entradas de experiencia / proyectos ---------- */
+
+.entry {
+  margin-top: 7px;
+  /* Evita que una entrada se parta entre páginas. */
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+
+.entry:first-of-type {
+  margin-top: 0;
+}
+
+.entry-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.entry-title {
+  font-weight: 700;
+  font-size: 10.6pt;
+}
+
+.entry-title .at {
+  font-weight: 400;
+  color: #555;
+}
+
+.entry-date {
+  font-size: 9.2pt;
+  color: #555;
+  white-space: nowrap;
+}
+
+ul {
+  margin: 4px 0 0;
+  padding-left: 16px;
+}
+
+li {
+  margin-bottom: 1.5px;
+}
+
+.stack {
+  margin: 5px 0 0;
+  font-size: 9.2pt;
+  color: #444;
+}
+
+.stack strong {
+  color: #1f4e79;
+}
+
+/* ---------- Skills / educación / idiomas ---------- */
+
+.rows {
+  margin: 0;
+}
+
+.rows div {
+  margin-bottom: 3px;
+}
+
+.rows strong {
+  color: #1f4e79;
+}
+
+.compact {
+  margin: 0;
+  padding-left: 16px;
+}
+
+.compact li {
+  margin-bottom: 2px;
+}

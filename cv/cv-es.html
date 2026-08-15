@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>Leandro Licata — CV</title>
+    <link rel="stylesheet" href="cv.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Leandro Licata</h1>
+      <p class="role">
+        Desarrollador Web Full Stack — Next.js · NestJS · TypeScript · PostgreSQL
+      </p>
+      <p class="contact">
+        <span
+          >Mendoza, Argentina (GMT-3) — remoto, híbrido o presencial</span
+        >
+        <span>leandrolicata1@gmail.com</span>
+        <span>+54 9 261 715 3984</span>
+      </p>
+      <p class="contact">
+        <span>linkedin.com/in/leandro-licata</span>
+        <span>github.com/LeandroLicata</span>
+        <span>leandro-licata-portfolio.vercel.app</span>
+      </p>
+    </header>
+
+    <h2>Resumen</h2>
+    <p class="summary">
+      Desarrollador full stack con foco en TypeScript: React y Next.js del lado
+      del cliente, NestJS y PostgreSQL del lado del servidor. Vengo de una
+      plataforma de e-learning en producción, donde llevé funcionalidades de
+      punta a punta —de la base de datos a la interfaz— sobre siete
+      repositorios y bastante código heredado. Trabajo con testing automatizado
+      y me manejo bien tomando features complejas y dejándolas andando. 100%
+      remoto en equipos distribuidos; abierto también a híbrido o presencial en
+      Mendoza.
+    </p>
+
+    <h2>Experiencia</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title"
+          >Desarrollador Web Full Stack <span class="at">— Olalingo</span></span
+        >
+        <span class="entry-date">dic 2025 – jul 2026 · Remoto</span>
+      </div>
+      <ul>
+        <li>
+          Reconstruí el panel de administración migrándolo de PHP + React a
+          Next.js: unos 20 módulos (cursos, clases, pagos, estadísticas,
+          soporte) entregados y responsive en poco más de un mes.
+        </li>
+        <li>
+          Construí la capa de pagos multi-proveedor que abstrajo Stripe y
+          MercadoPago detrás de una sola interfaz, con ledger de transacciones
+          escrito desde los webhooks y circuito completo de retiros y comisiones
+          para profesores.
+        </li>
+        <li>
+          Implementé el chat de soporte en tiempo real con WebSockets,
+          indicadores de presencia en línea y notificaciones in-app y por email.
+        </li>
+        <li>
+          Llevé el testing a 5 repositorios con Vitest, Playwright y Jest,
+          incluida una suite end-to-end de 37 suites y 232 tests en el backend
+          de Campus.
+        </li>
+        <li>
+          Eliminé una clase entera de bugs de zonas horarias fijando un contrato
+          UTC de punta a punta, e hice atómica la reserva de clases para
+          terminar con las dobles reservas por concurrencia.
+        </li>
+        <li>
+          Migré la autenticación a NextAuth con access y refresh tokens JWT en
+          dos plataformas.
+        </li>
+        <li>
+          Saneé código heredado: 433 errores de ESLint resueltos, tipado
+          estricto en reemplazo de <em>any</em>, vulnerabilidades de
+          dependencias y expiración de JWT en tokens de administración.
+        </li>
+      </ul>
+      <p class="stack">
+        <strong>Stack:</strong> Next.js, TypeScript, NestJS, PostgreSQL,
+        Prisma, TypeORM, Socket.IO, Stripe, MercadoPago, Vitest, Playwright
+      </p>
+    </div>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title"
+          >Desarrollador Web, pasantía <span class="at">— Timbring</span></span
+        >
+        <span class="entry-date">jul – nov 2024</span>
+      </div>
+      <ul>
+        <li>
+          Lideré la migración del sistema de autenticación de Auth0 a NextAuth
+          en una plataforma con usuarios reales en producción.
+        </li>
+        <li>
+          Desarrollé la landing responsive y el formulario de registro con
+          validaciones.
+        </li>
+        <li>Implementé el flujo de recuperación de contraseñas.</li>
+        <li>Di soporte al resto del equipo en Next.js y Redux Toolkit.</li>
+      </ul>
+      <p class="stack">
+        <strong>Stack:</strong> Next.js, TypeScript, TailwindCSS, Redux Toolkit,
+        Node.js
+      </p>
+    </div>
+
+    <h2>Proyecto personal</h2>
+
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title"
+          >Lean Market <span class="at">— e-commerce (en desarrollo)</span></span
+        >
+        <span class="entry-date">lean-market.vercel.app</span>
+      </div>
+      <ul>
+        <li>
+          E-commerce armado desde cero: catálogo con búsqueda y filtros,
+          productos destacados y capa de datos con Prisma sobre PostgreSQL.
+          Próximos pasos: carrito, checkout y panel de administración.
+        </li>
+      </ul>
+      <p class="stack">
+        <strong>Stack:</strong> Next.js, TypeScript, TailwindCSS, Prisma,
+        PostgreSQL
+      </p>
+    </div>
+
+    <h2>Tecnologías</h2>
+    <div class="rows">
+      <div>
+        <strong>Frontend:</strong> TypeScript, JavaScript (ES6+), React,
+        Next.js, Redux Toolkit, TailwindCSS, diseño responsive
+      </div>
+      <div>
+        <strong>Backend:</strong> Node.js, NestJS, APIs REST, NextAuth / JWT,
+        WebSockets (Socket.IO), Stripe y MercadoPago (webhooks y conciliación)
+      </div>
+      <div>
+        <strong>Datos:</strong> PostgreSQL, MongoDB, Prisma, TypeORM, SQL
+      </div>
+      <div>
+        <strong>Testing:</strong> Vitest, Jest, Playwright, Testing Library,
+        Supertest
+      </div>
+      <div>
+        <strong>Herramientas:</strong> Git, GitHub, Docker, Vercel, Postman,
+        CI/CD, Claude Code
+      </div>
+    </div>
+
+    <h2>Educación e idiomas</h2>
+    <ul class="compact">
+      <li>
+        Tecnicatura Superior en Desarrollo de Software — Instituto Superior
+        Manuel Belgrano (2026 – en curso)
+      </li>
+      <li>Full Stack Web Developer — Henry (2022 – 2023)</li>
+      <li>
+        Técnico en reparación de PC (2015) y técnico electricista con
+        orientación en electrónica (2012) — Mendoza
+      </li>
+      <li>
+        <strong>Idiomas:</strong> español nativo · inglés avanzado (lectura,
+        escritura y conversación)
+      </li>
+    </ul>
+  </body>
+</html>
