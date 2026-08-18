@@ -4,6 +4,12 @@ import { motion } from "framer-motion";
 
 const EDUCATION = [
   {
+    title:
+      "Capacitación en Desarrollo de Software para Gestión Hospitalaria y Tecnologías Biomédicas",
+    institution: "Hospital Universitario, UNCuyo",
+    date: "Mayo 2026 — En curso",
+  },
+  {
     title: "Tecnicatura Superior en Desarrollo de Software",
     institution: "Instituto Superior Manuel Belgrano",
     date: "2026 — En curso",
