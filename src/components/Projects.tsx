@@ -39,8 +39,11 @@ const PROJECTS = [
       "Sistema de gestión prequirúrgica para el Hospital Universitario de la UNCuyo: agenda de quirófanos, autorizaciones ante obras sociales, pedidos de materiales y hemoderivados, evaluación pre-anestésica y consentimientos informados. Lo desarrollamos en equipo. Me ocupé del módulo de administración (usuarios y roles, auditoría, catálogos, consentimientos y precios), integré Cloudinary para los archivos clínicos, dockericé el proyecto y me hice cargo del despliegue.",
     links: [
       {
-        href: "https://startmed.onrender.com",
-        label: "Ver demo",
+        // Apunta a la página de enlaces y no a la demo directa: la demo pide
+        // login y esa página tiene los usuarios de prueba, el aviso del cold
+        // start de Render y el link al código.
+        href: "https://leandrolicata.github.io/startmed-enlaces/",
+        label: "Demo y accesos",
         icon: "link" as const,
       },
       {
