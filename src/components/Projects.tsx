@@ -20,6 +20,10 @@ const TAGS = {
   CLOUDINARY: "Cloudinary",
   PRISMA: "Prisma",
   POSTGRESQL: "PostgreSQL",
+  LARAVEL: "Laravel",
+  PHP: "PHP",
+  MYSQL: "MySQL",
+  DOCKER: "Docker",
 } as const;
 
 const ICONS = {
@@ -29,6 +33,34 @@ const ICONS = {
 } as const;
 
 const PROJECTS = [
+  {
+    title: "StartMed",
+    description:
+      "Sistema de gestión prequirúrgica para el Hospital Universitario de la UNCuyo: agenda de quirófanos, autorizaciones ante obras sociales, pedidos de materiales y hemoderivados, evaluación pre-anestésica y consentimientos informados. Lo desarrollamos en equipo y fui el principal contribuidor. Me ocupé del módulo de administración (usuarios y roles, auditoría, catálogos, consentimientos y precios), integré Cloudinary para los archivos clínicos, dockericé el proyecto y me hice cargo del despliegue.",
+    links: [
+      {
+        href: "https://startmed.onrender.com",
+        label: "Ver demo",
+        icon: "link" as const,
+      },
+      {
+        href: "https://github.com/LeandroLicata/StartMed",
+        label: "Código",
+        icon: "github" as const,
+      },
+    ],
+    image: "/images/StartMed.png",
+    width: 1200,
+    height: 675,
+    tags: [
+      TAGS.LARAVEL,
+      TAGS.PHP,
+      TAGS.MYSQL,
+      TAGS.DOCKER,
+      TAGS.CLOUDINARY,
+      TAGS.BOOTSTRAP,
+    ],
+  },
   {
     title: "Timbring",
     description:
