@@ -53,8 +53,8 @@ const PROJECTS = [
       },
     ],
     image: "/images/StartMed.png",
-    width: 1200,
-    height: 675,
+    width: 960,
+    height: 540,
     tags: [
       TAGS.LARAVEL,
       TAGS.PHP,
