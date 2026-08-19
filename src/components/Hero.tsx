@@ -106,7 +106,7 @@ export default function Hero() {
         <motion.p variants={fadeUp} className="mt-3 text-text-dim">
           Desde Mendoza, Argentina (GMT-3). Vengo de una plataforma de
           e-learning en producción —pagos, tiempo real y testing— y hoy
-          construyo software de gestión hospitalaria en el{" "}
+          desarrollo sistemas de gestión hospitalaria en una capacitación del{" "}
           <span className="text-text-secondary">Hospital Universitario</span>.
         </motion.p>
 

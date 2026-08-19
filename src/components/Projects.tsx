@@ -36,7 +36,7 @@ const PROJECTS = [
   {
     title: "StartMed",
     description:
-      "Sistema de gestión prequirúrgica para el Hospital Universitario de la UNCuyo: agenda de quirófanos, autorizaciones ante obras sociales, pedidos de materiales y hemoderivados, evaluación pre-anestésica y consentimientos informados. Lo desarrollamos en equipo. Me ocupé del módulo de administración (usuarios y roles, auditoría, catálogos, consentimientos y precios), integré Cloudinary para los archivos clínicos, dockericé el proyecto y me hice cargo del despliegue.",
+      "Sistema de gestión prequirúrgica: agenda de quirófanos, autorizaciones ante obras sociales, pedidos de materiales y hemoderivados, evaluación pre-anestésica y consentimientos informados. Lo desarrollamos en equipo durante la capacitación en el Hospital Universitario de la UNCuyo. Me ocupé del módulo de administración (usuarios y roles, auditoría, catálogos, consentimientos y precios), integré Cloudinary para los archivos clínicos, dockericé el proyecto y me hice cargo del despliegue.",
     links: [
       {
         // Apunta a la página de enlaces y no a la demo directa: la demo pide
