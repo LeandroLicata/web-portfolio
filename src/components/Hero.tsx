@@ -74,13 +74,18 @@ export default function Hero() {
         {/* Status badge */}
         <motion.div
           variants={fadeUp}
-          className="flex items-center gap-2 mb-4 text-sm text-accent-green border border-accent-green/30 bg-accent-green/5 rounded px-3 py-1.5 w-fit"
+          className="flex items-center gap-2 mb-4 text-sm text-accent-green border border-accent-green/30 bg-accent-green/5 rounded px-3 py-1.5 w-fit max-w-full"
         >
-          <span className="relative flex h-2.5 w-2.5">
+          <span className="relative flex h-2.5 w-2.5 shrink-0">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-green opacity-75" />
             <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-accent-green" />
           </span>
-          {"> disponible para trabajar"}
+          {/* min-w-0 junto con el max-w-full del badge deja que el texto se
+              parta en dos líneas si crece: como ítem de flex tiene min-width
+              auto y, sin esto, empujaría el ancho en vez de wrapear. */}
+          <span className="min-w-0">
+            {"> disponible: remoto, híbrido o presencial"}
+          </span>
         </motion.div>
 
         <motion.h1
@@ -99,9 +104,10 @@ export default function Hero() {
         </motion.p>
 
         <motion.p variants={fadeUp} className="mt-3 text-text-dim">
-          Desde Mendoza, Argentina (GMT-3). Construyo aplicaciones web modernas
-          y escalables, en remoto para equipos de cualquier parte del mundo o
-          presencial e híbrido en Mendoza.
+          Desde Mendoza, Argentina (GMT-3). Vengo de una plataforma de
+          e-learning en producción —pagos, tiempo real y testing— y hoy
+          construyo software de gestión hospitalaria en el{" "}
+          <span className="text-text-secondary">Hospital Universitario</span>.
         </motion.p>
 
         <motion.nav
