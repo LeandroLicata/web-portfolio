@@ -23,6 +23,7 @@ const TAGS = {
   LARAVEL: "Laravel",
   PHP: "PHP",
   MYSQL: "MySQL",
+  NEXTAUTH: "NextAuth / JWT",
   DOCKER: "Docker",
 } as const;
 
@@ -83,7 +84,7 @@ const PROJECTS = [
   {
     title: "Lean Market",
     description:
-      "E-commerce de productos electrónicos que armé desde cero para practicar una arquitectura full stack completa: catálogo con búsqueda y filtros, productos destacados, y capa de datos con Prisma sobre PostgreSQL. En desarrollo activo — próximos pasos: carrito, checkout y panel de administración.",
+      "E-commerce de electrónica que armé desde cero para practicar una arquitectura full stack completa: catálogo con búsqueda, filtros y paginación, autenticación con NextAuth y rutas protegidas, y un carrito que funciona sin cuenta y se fusiona con el de la cuenta al iniciar sesión. La compra corre entera en una transacción que descuenta stock de forma atómica, para que dos pedidos simultáneos no puedan dejarlo en negativo, y queda registrada en el historial de pedidos. Falta la pasarela de pago: por ahora la orden queda pendiente de cobro.",
     links: [
       {
         href: "https://lean-market.vercel.app/",
@@ -106,6 +107,7 @@ const PROJECTS = [
       TAGS.REDUX,
       TAGS.PRISMA,
       TAGS.POSTGRESQL,
+      TAGS.NEXTAUTH,
     ],
   },
   {
