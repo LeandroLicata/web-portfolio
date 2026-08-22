@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github, Youtube } from "lucide-react";
+import { ExternalLink, Github } from "lucide-react";
 import LinkButton from "./LinkButton";
 import TVEffect from "./TVEffect";
 import TiltCard from "./TiltCard";
@@ -30,7 +30,6 @@ const TAGS = {
 const ICONS = {
   link: ExternalLink,
   github: Github,
-  youtube: Youtube,
 } as const;
 
 const PROJECTS = [
@@ -135,32 +134,6 @@ const PROJECTS = [
     width: 960,
     height: 540,
     tags: [TAGS.REACT, TAGS.BOOTSTRAP, TAGS.REDUX, TAGS.NODE, TAGS.MONGODB],
-  },
-  {
-    title: "Novelty Books",
-    description:
-      "E-commerce de libros desarrollado en equipo como proyecto final de Henry, trabajando con metodología ágil y control de versiones compartido. Incluye catálogo, carrito, gestión de usuarios y carga de imágenes con Cloudinary.",
-    links: [
-      {
-        href: "https://www.youtube.com/watch?v=6JF0WrhJlw0",
-        label: "Demo",
-        icon: "youtube" as const,
-      },
-      {
-        href: "https://github.com/Chitichi/PFFront",
-        label: "Front",
-        icon: "github" as const,
-      },
-      {
-        href: "https://github.com/Arthaz1245/ProyectoFinalGrupo14Backend",
-        label: "Back",
-        icon: "github" as const,
-      },
-    ],
-    image: "/images/Novelty-Books.png",
-    width: 960,
-    height: 540,
-    tags: [TAGS.MONGODB, TAGS.NODE, TAGS.CLOUDINARY, TAGS.NEXT, TAGS.BOOTSTRAP],
   },
 ];
 
