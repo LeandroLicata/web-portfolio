@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "cv": "node cv/build.mjs"
+    "cv": "node cv/build.mjs",
+    "chat:eval": "node scripts/chat-eval.mjs"
   },
   "dependencies": {
     "@google/genai": "^2.18.0",
