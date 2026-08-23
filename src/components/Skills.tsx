@@ -2,51 +2,7 @@
 
 import { motion } from "framer-motion";
 import TechChip from "./TechChip";
-
-const GROUPS: { label: string; skills: string[] }[] = [
-  {
-    label: "Frontend",
-    skills: [
-      "React",
-      "Next.js",
-      "TypeScript",
-      "JavaScript",
-      "TailwindCSS",
-      "Redux Toolkit",
-      "Bootstrap",
-    ],
-  },
-  {
-    label: "Backend",
-    skills: [
-      "Node.js",
-      "NestJS",
-      "REST APIs",
-      "NextAuth / JWT",
-      "WebSockets / Socket.IO",
-      "Stripe",
-      "MercadoPago",
-    ],
-  },
-  {
-    label: "Bases de datos",
-    skills: ["PostgreSQL", "MongoDB", "Prisma", "TypeORM"],
-  },
-  {
-    label: "Testing y herramientas",
-    skills: [
-      "Vitest",
-      "Jest",
-      "Playwright",
-      "Testing Library",
-      "Supertest",
-      "Git / GitHub",
-      "Docker",
-      "Vercel",
-      "Claude Code",
-    ],
-  },
-];
+import { SKILL_GROUPS } from "@/lib/content/skills";
 
 const group = {
   hidden: { opacity: 0, y: 24 },
@@ -66,7 +22,7 @@ export default function Skills() {
       viewport={{ once: true, margin: "-80px" }}
       transition={{ staggerChildren: 0.12 }}
     >
-      {GROUPS.map(({ label, skills }) => (
+      {SKILL_GROUPS.map(({ label, skills }) => (
         <motion.div
           key={label}
           variants={group}
