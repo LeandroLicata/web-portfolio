@@ -3,6 +3,7 @@ import { VT323 } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import Chatbot from "@/components/Chatbot";
 import { SITE } from "@/lib/site";
 
 const vt323 = VT323({
@@ -94,13 +95,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-        {/*
-          Chatbot desmontado a propósito: el escenario de Make.com detrás de
-          CHATBOT_WEBHOOK está fallando y devuelve texto plano en lugar de JSON,
-          así que el widget contesta "Ocurrió un error" a cualquier mensaje.
-          El componente y la API route quedan en el repo; para reactivarlo,
-          arreglá el escenario en Make y volvé a montar <Chatbot /> acá.
-        */}
+        <Chatbot />
       </body>
     </html>
   );
