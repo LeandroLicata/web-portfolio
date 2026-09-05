@@ -39,16 +39,26 @@ header {
 
 h1 {
   margin: 0;
-  font-size: 20pt;
-  font-weight: 600;
-  letter-spacing: -0.3px;
+  font-size: 22pt;
+  font-weight: 700;
+  text-transform: uppercase;
+  /* Las versales necesitan aire entre letras para no apelmazarse. */
+  letter-spacing: 0.8px;
   color: #1f4e79;
 }
 
+/* El puesto en color y el stack atras en gris: tres niveles de lectura
+   (nombre, puesto, stack) en vez de dos. */
 .role {
-  margin: 3px 0 0;
-  font-size: 10.8pt;
-  color: #333;
+  margin: 2px 0 0;
+  font-size: 11.4pt;
+  font-weight: 600;
+  color: #1f4e79;
+}
+
+.role .stack-inline {
+  font-weight: 400;
+  color: #555;
 }
 
 .contact {
@@ -156,4 +166,57 @@ li {
 
 .compact li {
   margin-bottom: 2px;
+}
+
+/* ---------- Encabezado con foto (solo cv-es-foto.html) ----------
+   La variante con foto usa un header en dos columnas. El resto de los CV
+   ignora estas reglas: no tienen .header-inner ni .photo. */
+
+.header-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.header-text {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Proporcion vertical (4:5): el retrato de origen es cuadrado, asi que el
+   marco angosto recorta fondo y la cara ocupa mas dentro del mismo alto. */
+.photo {
+  width: 24mm;
+  height: 30mm;
+  object-fit: cover;
+  object-position: center top;
+  border: 1px solid #c8d4e0;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+/* QR al portfolio, para cuando el CV se entrega impreso: en papel los enlaces
+   no se pueden clickear y el portfolio ya reune todas las demos y repos. */
+
+.qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1px;
+  flex-shrink: 0;
+  align-self: flex-end;
+}
+
+.qr img {
+  display: block;
+  width: 15mm;
+  height: 15mm;
+}
+
+.qr span {
+  font-size: 6.4pt;
+  color: #666;
+  letter-spacing: 0.3px;
+  text-transform: uppercase;
 }

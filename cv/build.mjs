@@ -28,17 +28,21 @@ if (!chrome) {
   process.exit(1);
 }
 
-for (const [lang, suffix] of [
-  ["es", "ES"],
-  ["en", "EN"],
+for (const [source, suffix] of [
+  ["cv-es.html", "ES"],
+  ["cv-en.html", "EN"],
+  // Variante en español con foto y habilidades blandas.
+  ["cv-es-foto.html", "ES_Foto"],
 ]) {
   const target = resolve(out, `Leandro_Licata_CV_${suffix}.pdf`);
   execFileSync(chrome, [
     "--headless",
     "--disable-gpu",
     "--no-pdf-header-footer",
+    // La variante con foto carga una imagen local desde file://.
+    "--allow-file-access-from-files",
     `--print-to-pdf=${target}`,
-    `file://${resolve(here, `cv-${lang}.html`).replace(/\\/g, "/")}`,
+    `file://${resolve(here, source).replace(/\\/g, "/")}`,
   ]);
   console.log(`✓ ${target}`);
 }
