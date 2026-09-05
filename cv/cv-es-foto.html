@@ -4,38 +4,78 @@
     <meta charset="utf-8" />
     <title>Leandro Licata — CV</title>
     <link rel="stylesheet" href="cv.css" />
+    <style>
+      /* Ajuste fino de esta variante: la foto y las habilidades blandas suman
+         alto, y el CV tiene que seguir entrando en una sola pagina. */
+      body {
+        font-size: 9.3pt;
+        line-height: 1.25;
+      }
+      h2 {
+        margin: 5px 0 3px;
+      }
+      .entry {
+        margin-top: 4px;
+      }
+      li {
+        margin-bottom: 0.5px;
+      }
+      .rows div {
+        margin-bottom: 1px;
+      }
+      .stack {
+        margin-top: 4px;
+      }
+      .compact li {
+        margin-bottom: 1px;
+      }
+      /* Justificado abre rios de espacio en un parrafo tan angosto. */
+      .summary {
+        text-align: left;
+      }
+    </style>
   </head>
   <body>
     <header>
-      <h1>Leandro Licata</h1>
-      <p class="role">
-        Desarrollador Web Full Stack
-        <span class="stack-inline"
-          >— Next.js · NestJS · TypeScript · PostgreSQL</span
-        >
-      </p>
-      <p class="contact">
-        <span
-          >Mendoza, Argentina (GMT-3) — remoto, híbrido o presencial</span
-        >
-        <span>leandrolicata1@gmail.com</span>
-        <span>+54 9 261 715 3984</span>
-      </p>
-      <p class="contact">
-        <span>linkedin.com/in/leandro-licata</span>
-        <span>github.com/LeandroLicata</span>
-        <span>leandro-licata-portfolio.vercel.app</span>
-      </p>
+      <div class="header-inner">
+        <div class="header-text">
+          <h1>Leandro Licata</h1>
+          <p class="role">
+            Desarrollador Web Full Stack
+            <span class="stack-inline"
+              >— Next.js · NestJS · TypeScript · PostgreSQL</span
+            >
+          </p>
+          <p class="contact">
+            <span>Mendoza, Argentina (GMT-3)</span>
+            <span>leandrolicata1@gmail.com</span>
+            <span>+54 9 261 715 3984</span>
+          </p>
+          <p class="contact">
+            <span>linkedin.com/in/leandro-licata</span>
+            <span>github.com/LeandroLicata</span>
+            <span>leandro-licata-portfolio.vercel.app</span>
+          </p>
+        </div>
+        <div class="qr">
+          <img src="../public/images/qr-portfolio.svg" alt="" />
+          <span>Portfolio</span>
+        </div>
+        <img
+          class="photo"
+          src="../public/images/foto-cv.jpg"
+          alt="Foto de Leandro Licata"
+        />
+      </div>
     </header>
 
     <h2>Resumen</h2>
     <p class="summary">
       Desarrollador full stack especializado en TypeScript: React y Next.js del
-      lado del cliente, NestJS y PostgreSQL del lado del servidor. Experiencia
-      en aplicaciones web en producción —pagos, autenticación, sistemas en
-      tiempo real y testing automatizado—, llevando funcionalidades de punta a
-      punta sobre siete repositorios y bastante código heredado. Remoto,
-      híbrido o presencial en Mendoza.
+      lado del cliente, NestJS y PostgreSQL del lado del servidor. Pagos,
+      autenticación, tiempo real y testing automatizado en producción, llevando
+      funcionalidades de punta a punta sobre los siete repositorios del producto
+      y bastante código heredado. Remoto, híbrido o presencial en Mendoza.
     </p>
 
     <h2>Experiencia</h2>
@@ -94,10 +134,9 @@
           en una plataforma con usuarios reales en producción.
         </li>
         <li>
-          Desarrollé la landing responsive y el formulario de registro con
-          validaciones.
+          Desarrollé la landing responsive, el formulario de registro con
+          validaciones y el flujo de recuperación de contraseñas.
         </li>
-        <li>Implementé el flujo de recuperación de contraseñas.</li>
         <li>Di soporte al resto del equipo en Next.js y Redux Toolkit.</li>
       </ul>
       <p class="stack">
@@ -106,7 +145,7 @@
       </p>
     </div>
 
-    <h2>Proyecto destacado</h2>
+    <h2>Proyectos</h2>
 
     <div class="entry">
       <div class="entry-head">
@@ -116,7 +155,7 @@
         >
         <span class="entry-date"
           ><a href="https://leandrolicata.github.io/startmed-enlaces/"
-            >demo y usuarios de prueba</a
+            >leandrolicata.github.io/startmed-enlaces</a
           ></span
         >
       </div>
@@ -124,13 +163,11 @@
         <li>
           Gestión de cirugías: quirófanos, autorizaciones, materiales y
           hemoderivados, evaluación pre-anestésica y consentimientos.
-          Desarrollado en equipo durante la capacitación en el Hospital
-          Universitario de la UNCuyo.
+          Desarrollado en equipo en el Hospital Universitario de la UNCuyo.
         </li>
         <li>
-          Construí el módulo de administración (usuarios y roles, auditoría,
-          catálogos, consentimientos y precios), integré Cloudinary para los
-          archivos clínicos, y me encargué de dockerizar y desplegar.
+          Construí el módulo de administración (usuarios, roles, auditoría,
+          catálogos), integré Cloudinary y desplegué con Docker.
         </li>
       </ul>
       <p class="stack">
@@ -139,7 +176,33 @@
       </p>
     </div>
 
-    
+    <div class="entry">
+      <div class="entry-head">
+        <span class="entry-title"
+          >Lean Market <span class="at">— e-commerce full stack</span></span
+        >
+        <span class="entry-date"
+          >2025 ·
+          <a href="https://lean-market.vercel.app/">lean-market.vercel.app</a></span
+        >
+      </div>
+      <ul>
+        <li>
+          Proyecto propio de punta a punta: catálogo con búsqueda, filtros y
+          paginación, autenticación con NextAuth y un carrito que funciona sin
+          cuenta y se fusiona con el de la cuenta al iniciar sesión.
+        </li>
+        <li>
+          La compra corre en una transacción que descuenta stock de forma
+          atómica: dos pedidos simultáneos no lo dejan en negativo.
+        </li>
+      </ul>
+      <p class="stack">
+        <strong>Stack:</strong> Next.js, TypeScript, Prisma, PostgreSQL,
+        NextAuth, TailwindCSS
+      </p>
+    </div>
+
     <h2>Tecnologías</h2>
     <div class="rows">
       <div>
@@ -160,6 +223,23 @@
       <div>
         <strong>Herramientas:</strong> Git, GitHub, Docker, Vercel, Postman,
         CI/CD, Claude Code
+      </div>
+    </div>
+
+    <h2>Habilidades blandas</h2>
+    <div class="rows">
+      <div>
+        <strong>Trabajo en equipo:</strong> construí StartMed en equipo en el
+        Hospital Universitario y di soporte al resto del equipo en Timbring.
+      </div>
+      <div>
+        <strong>Comunicación y autonomía:</strong> trabajo remoto de punta a
+        punta, coordinando por escrito y entregando sin supervisión constante.
+      </div>
+      <div>
+        <strong>Resolución de problemas y aprendizaje continuo:</strong>
+        diagnóstico de bugs de concurrencia y zonas horarias sobre código
+        heredado; adopción rápida de stacks nuevos (NestJS, Laravel, Playwright).
       </div>
     </div>
 
