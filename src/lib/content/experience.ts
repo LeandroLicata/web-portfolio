@@ -18,7 +18,7 @@ export const EXPERIENCES: readonly Experience[] = [
       "Plataforma de e-learning de idiomas. Trabajé en remoto sobre 7 repositorios (Olalingo Online, Olalingo Campus y el panel de administración), tocando el stack completo: Next.js y NestJS sobre PostgreSQL.",
     tasks: [
       "Reconstruí el panel de administración desde cero, migrándolo de PHP + React a Next.js: ~20 módulos (cursos, clases, pagos, estadísticas, soporte) entregados y responsive en poco más de un mes.",
-      "Construí la capa de pagos multi-proveedor que abstrajo Stripe y MercadoPago detrás de una sola interfaz, con ledger de transacciones escrito desde los webhooks y circuito de retiros y comisiones para profesores.",
+      "Construí la capa de pagos multi-proveedor que abstrajo Stripe y MercadoPago detrás de una sola interfaz: checkouts, suscripciones recurrentes, ledger de transacciones idempotente escrito desde los webhooks y circuito de retiros y comisiones para profesores.",
       "Implementé el chat de soporte en tiempo real con WebSockets, indicadores de presencia en línea y notificaciones in-app por email.",
       "Llevé el testing a 5 repositorios con Vitest, Playwright y Jest — incluida una suite e2e de 37 suites y 232 tests en el backend de Campus.",
       "Corregí una clase entera de bugs de zonas horarias fijando un contrato UTC de punta a punta, e hice atómica la reserva de clases para eliminar las dobles reservas por concurrencia.",
