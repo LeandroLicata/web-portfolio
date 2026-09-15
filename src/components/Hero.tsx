@@ -145,6 +145,11 @@ export default function Hero() {
         </motion.nav>
       </motion.div>
 
+      {/* Sin `priority` a propósito: el contenedor se oculta por CSS y Next no
+          se entera, así que el preload que emite `priority` sale sin media
+          query y en mobile baja con prioridad alta una imagen que nunca se
+          pinta. Sin él queda loading="lazy", y una imagen lazy dentro de un
+          display:none no se descarga. */}
       <motion.div
         className="hidden lg:block shrink-0"
         variants={fadeRight}
@@ -158,7 +163,6 @@ export default function Hero() {
           width={1024}
           height={1024}
           sizes="256px"
-          priority
         />
       </motion.div>
     </div>
